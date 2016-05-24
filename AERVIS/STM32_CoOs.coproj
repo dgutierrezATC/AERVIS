@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G - 1.7.4" name="STM32_CoOs">
+  <Target name="STM32_CoOs" isCurrent="1">
+    <Device manufacturerId="9" manufacturerName="ST" chipId="344" chipName="STM32F407VG" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value=""/>
+        <Option name="FPU" value="1"/>
+        <Includepaths>
+          <Includepath path="."/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="USE_STDPERIPH_DRIVER"/>
+          <Define name="__ASSEMBLY__"/>
+          <Define name="STM32F407VG"/>
+          <Define name="STM32F4XX"/>
+          <Define name="__FPU_USED"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="LTO" value="0"/>
+        <Option name="IsNewStartupCode" value="1"/>
+        <Option name="Library" value="Retarget"/>
+        <LinkedLibraries/>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00100000" startValue="0x08000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00020000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="0x00010000" startValue="0x10000000"/>
+        </MemoryAreas>
+        <LocateLinkFile path="../../../../../../../../../coocox/coide/configuration/programdata/stm32_coos/arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="STM32_CoOs"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="ST-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="STM32F4xx_1024.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./">
+    <Component id="30" name="C Library" path="" type="2"/>
+    <Component id="31" name="Retarget printf" path="" type="2"/>
+    <Component id="54" name="M4 CMSIS Core" path="" type="2"/>
+    <Component id="500" name="CMSIS BOOT" path="" type="2"/>
+    <Component id="501" name="RCC" path="" type="2"/>
+    <Component id="504" name="GPIO" path="" type="2"/>
+    <Component id="511" name="DMA" path="" type="2"/>
+    <Component id="512" name="FLASH" path="" type="2"/>
+    <Component id="513" name="TIM" path="" type="2"/>
+    <Component id="514" name="ADC" path="" type="2"/>
+    <Component id="516" name="FSMC" path="" type="2"/>
+    <Component id="517" name="USART" path="" type="2"/>
+    <Component id="524" name="MISC" path="" type="2"/>
+    <Component id="530" name="STMF4CoOS" path="" type="2"/>
+  </Components>
+  <Files>
+    <File name="cmsis_lib/include/stm32f4xx_flash.h" path="cmsis_lib/include/stm32f4xx_flash.h" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_usart.c" path="cmsis_lib/source/stm32f4xx_usart.c" type="1"/>
+    <File name="AER" path="" type="2"/>
+    <File name="CoOs/kernel/flag.c" path="CoOS/kernel/flag.c" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_usart.h" path="cmsis_lib/include/stm32f4xx_usart.h" type="1"/>
+    <File name="cmsis_boot/stm32f4xx.h" path="cmsis_boot/stm32f4xx.h" type="1"/>
+    <File name="cmsis/core_cm4_simd.h" path="cmsis/core_cm4_simd.h" type="1"/>
+    <File name="Tasks" path="" type="2"/>
+    <File name="cmsis/core_cmFunc.h" path="cmsis/core_cmFunc.h" type="1"/>
+    <File name="BSP/analogJoy_driver.h" path="BSP/analogJoy_driver.h" type="1"/>
+    <File name="CoOs/kernel/core.c" path="CoOS/kernel/core.c" type="1"/>
+    <File name="LCD" path="" type="2"/>
+    <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
+    <File name="BSP/led_driver.c" path="BSP/led_driver.c" type="1"/>
+    <File name="BSP" path="" type="2"/>
+    <File name="CoOs" path="" type="2"/>
+    <File name="BSP/joy_driver.c" path="BSP/joy_driver.c" type="1"/>
+    <File name="CoOs/portable/GCC" path="" type="2"/>
+    <File name="stdio/printf.c" path="stdio/printf.c" type="1"/>
+    <File name="CoOs/kernel" path="" type="2"/>
+    <File name="cmsis_lib/include/stm32f4xx_rcc.h" path="cmsis_lib/include/stm32f4xx_rcc.h" type="1"/>
+    <File name="Tasks/LCDTask.h" path="Tasks/LCDTask.h" type="1"/>
+    <File name="LCD/LCD.h" path="LCD/LCD.h" type="1"/>
+    <File name="Tasks/LedTask.c" path="Tasks/LedTask.c" type="1"/>
+    <File name="cmsis_boot/startup/startup_stm32f4xx.c" path="cmsis_boot/startup/startup_stm32f4xx.c" type="1"/>
+    <File name="stdio" path="" type="2"/>
+    <File name="CoOs/kernel/kernelHeap.c" path="CoOS/kernel/kernelHeap.c" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_rcc.c" path="cmsis_lib/source/stm32f4xx_rcc.c" type="1"/>
+    <File name="cmsis/core_cmInstr.h" path="cmsis/core_cmInstr.h" type="1"/>
+    <File name="CoOs/kernel/utility.h" path="CoOS/kernel/utility.h" type="1"/>
+    <File name="CoOs/kernel/OsMutex.h" path="CoOS/kernel/OsMutex.h" type="1"/>
+    <File name="CoOs/kernel/OsEvent.h" path="CoOS/kernel/OsEvent.h" type="1"/>
+    <File name="BSP/BSP.h" path="BSP/BSP.h" type="1"/>
+    <File name="CoOs/kernel/task.c" path="CoOS/kernel/task.c" type="1"/>
+    <File name="Tasks/LedTask.h" path="Tasks/LedTask.h" type="1"/>
+    <File name="Tasks/LCDTask.c" path="Tasks/LCDTask.c" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_adc.h" path="cmsis_lib/include/stm32f4xx_adc.h" type="1"/>
+    <File name="cmsis_boot/system_stm32f4xx.c" path="cmsis_boot/system_stm32f4xx.c" type="1"/>
+    <File name="BSP/led_driver.h" path="BSP/led_driver.h" type="1"/>
+    <File name="CoOs/portable/GCC/port.c" path="CoOS/portable/GCC/port.c" type="1"/>
+    <File name="cmsis" path="" type="2"/>
+    <File name="cmsis_lib" path="" type="2"/>
+    <File name="CoOs/kernel/time.c" path="CoOS/kernel/time.c" type="1"/>
+    <File name="CoOs/portable/OsArch.h" path="CoOS/portable/OsArch.h" type="1"/>
+    <File name="CoOs/kernel/event.c" path="CoOS/kernel/event.c" type="1"/>
+    <File name="CoOs/kernel/OsQueue.h" path="CoOS/kernel/OsQueue.h" type="1"/>
+    <File name="CoOs/kernel/OsError.h" path="CoOS/kernel/OsError.h" type="1"/>
+    <File name="cmsis_lib/include/misc.h" path="cmsis_lib/include/misc.h" type="1"/>
+    <File name="main.c" path="main.c" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_gpio.c" path="cmsis_lib/source/stm32f4xx_gpio.c" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_dma.c" path="cmsis_lib/source/stm32f4xx_dma.c" type="1"/>
+    <File name="Tasks/AERTask.h" path="Tasks/AERTask.h" type="1"/>
+    <File name="LCD/AsciiLib.h" path="LCD/AsciiLib.h" type="1"/>
+    <File name="CoOs/kernel/mm.c" path="CoOS/kernel/mm.c" type="1"/>
+    <File name="cmsis_boot" path="" type="2"/>
+    <File name="cmsis_lib/source/stm32f4xx_fsmc.c" path="cmsis_lib/source/stm32f4xx_fsmc.c" type="1"/>
+    <File name="Tasks/JoyTmr.h" path="Tasks/JoyTmr.h" type="1"/>
+    <File name="AER/AERdriver.c" path="AER/AERdriver.c" type="1"/>
+    <File name="CoOs/kernel/utility.c" path="CoOS/kernel/utility.c" type="1"/>
+    <File name="cmsis_boot/startup" path="" type="2"/>
+    <File name="cmsis_lib/source/stm32f4xx_flash.c" path="cmsis_lib/source/stm32f4xx_flash.c" type="1"/>
+    <File name="cmsis/core_cm4.h" path="cmsis/core_cm4.h" type="1"/>
+    <File name="CoOs/kernel/sem.c" path="CoOS/kernel/sem.c" type="1"/>
+    <File name="CoOs/portable/arch.c" path="CoOS/portable/arch.c" type="1"/>
+    <File name="CoOs/kernel/OsTimer.h" path="CoOS/kernel/OsTimer.h" type="1"/>
+    <File name="cmsis_lib/source/misc.c" path="cmsis_lib/source/misc.c" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_adc.c" path="cmsis_lib/source/stm32f4xx_adc.c" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_tim.h" path="cmsis_lib/include/stm32f4xx_tim.h" type="1"/>
+    <File name="CoOs/kernel/CoOS.h" path="CoOS/kernel/CoOS.h" type="1"/>
+    <File name="CoOs/kernel/OsKernelHeap.h" path="CoOS/kernel/OsKernelHeap.h" type="1"/>
+    <File name="cmsis_lib/source" path="" type="2"/>
+    <File name="CoOs/kernel/OsCore.h" path="CoOS/kernel/OsCore.h" type="1"/>
+    <File name="Tasks/JoyTmr.c" path="Tasks/JoyTmr.c" type="1"/>
+    <File name="CoOs/kernel/OsConfig.h" path="CoOS/kernel/OsConfig.h" type="1"/>
+    <File name="CoOs/kernel/OsMM.h" path="CoOS/kernel/OsMM.h" type="1"/>
+    <File name="cmsis_boot/stm32f4xx_conf.h" path="cmsis_boot/stm32f4xx_conf.h" type="1"/>
+    <File name="cmsis_boot/system_stm32f4xx.h" path="cmsis_boot/system_stm32f4xx.h" type="1"/>
+    <File name="CoOs/kernel/OsTime.h" path="CoOS/kernel/OsTime.h" type="1"/>
+    <File name="AER/AERdriver.h" path="AER/AERdriver.h" type="1"/>
+    <File name="CoOs/kernel/OsTask.h" path="CoOS/kernel/OsTask.h" type="1"/>
+    <File name="BSP/joy_driver.h" path="BSP/joy_driver.h" type="1"/>
+    <File name="CoOs/kernel/timer.c" path="CoOS/kernel/timer.c" type="1"/>
+    <File name="CoOs/kernel/serviceReq.c" path="CoOS/kernel/serviceReq.c" type="1"/>
+    <File name="LCD/LCD.c" path="LCD/LCD.c" type="1"/>
+    <File name="LCD/AsciiLib.c" path="LCD/AsciiLib.c" type="1"/>
+    <File name="CoOs/kernel/mutex.c" path="CoOS/kernel/mutex.c" type="1"/>
+    <File name="CoOs/kernel/queue.c" path="CoOS/kernel/queue.c" type="1"/>
+    <File name="Tasks/AERTask.c" path="Tasks/AERTask.c" type="1"/>
+    <File name="BSP/analogJoy_driver.c" path="BSP/analogJoy_driver.c" type="1"/>
+    <File name="CoOs/kernel/mbox.c" path="CoOS/kernel/mbox.c" type="1"/>
+    <File name="CoOs/kernel/coocox.h" path="CoOS/kernel/coocox.h" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_dma.h" path="cmsis_lib/include/stm32f4xx_dma.h" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_tim.c" path="cmsis_lib/source/stm32f4xx_tim.c" type="1"/>
+    <File name="CoOs/kernel/hook.c" path="CoOS/kernel/hook.c" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_gpio.h" path="cmsis_lib/include/stm32f4xx_gpio.h" type="1"/>
+    <File name="syscalls" path="" type="2"/>
+    <File name="cmsis_lib/include/stm32f4xx_fsmc.h" path="cmsis_lib/include/stm32f4xx_fsmc.h" type="1"/>
+    <File name="CoOs/kernel/OsServiceReq.h" path="CoOS/kernel/OsServiceReq.h" type="1"/>
+    <File name="cmsis_lib/include" path="" type="2"/>
+    <File name="CoOs/portable" path="" type="2"/>
+    <File name="CoOs/kernel/OsFlag.h" path="CoOS/kernel/OsFlag.h" type="1"/>
+  </Files>
+</Project>
