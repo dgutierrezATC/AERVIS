@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dependencies>
-   <includePath signature="/I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\AERVIS\AER /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\AERVIS\LCD /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\AERVIS\CoOS\portable /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\AERVIS\cmsis_lib /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\AERVIS\Tasks /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\AERVIS\cmsis_boot /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\AERVIS /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\AERVIS\CoOS /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\AERVIS\cmsis_lib\include /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\AERVIS\BSP /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\AERVIS\cmsis /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\AERVIS\CoOS\kernel">
+   <includePath signature="/I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\cmsis_lib\include /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\CoOS\portable /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\cmsis_boot /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\cmsis_lib /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\LCD /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\Tasks /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\BSP /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\AER /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\CoOS /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\CoOS\kernel /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\cmsis">
       <source file="..\..\..\BSP\analogJoy_driver.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\CoOS.h"/>
          <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
@@ -45,14 +45,14 @@
       <source file="..\..\..\cmsis_lib\source\misc.c" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_lib\include\misc.h"/>
       </source>
-      <source file="..\..\..\AER\AERdriver.h" lastModified="1548597eecf">
+      <source file="..\..\..\AER\AERdriver.h" lastModified="15526391517">
          <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
       </source>
       <source file="..\..\..\CoOS\kernel\OsTask.h" lastModified="140bb9f0680">
       </source>
       <source file="..\..\..\Tasks\JoyTmr.h" lastModified="140bb9f0680">
       </source>
-      <source file="..\..\..\AER\AERdriver.c" lastModified="15494fff04b">
+      <source file="..\..\..\AER\AERdriver.c" lastModified="15526397209">
          <include file="..\..\..\AER\AERdriver.h"/>
       </source>
       <source file="..\..\..\cmsis_boot\stm32f4xx.h" lastModified="140bb9f0298">
@@ -77,9 +77,9 @@
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_usart.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
       </source>
-      <source file="..\..\..\Tasks\LCDTask.h" lastModified="142333bf260">
+      <source file="..\..\..\Tasks\LCDTask.h" lastModified="15526ad5229">
       </source>
-      <source file="..\..\..\Tasks\LCDTask.c" lastModified="154962e51ec">
+      <source file="..\..\..\Tasks\LCDTask.c" lastModified="15526b25c3a">
          <include file="..\..\..\CoOS\kernel\CoOS.h"/>
          <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
          <include file="..\..\..\LCD\LCD.h"/>
@@ -121,10 +121,10 @@
       </source>
       <source file="..\..\..\CoOS\kernel\OsConfig.h" lastModified="140bb9f0680">
       </source>
-      <source file="..\..\..\stdio\printf.c" lastModified="140bb9f0680">
-      </source>
       <source file="..\..\..\CoOS\kernel\mutex.c" lastModified="140bb9efeb0">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
+      </source>
+      <source file="..\..\..\stdio\printf.c" lastModified="140bb9f0680">
       </source>
       <source file="..\..\..\CoOS\kernel\hook.c" lastModified="140bb9efeb0">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
@@ -194,18 +194,18 @@
       <source file="..\..\..\CoOS\kernel\queue.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\OsKernelHeap.h" lastModified="140bb9f0680">
-      </source>
       <source file="..\..\..\cmsis_lib\source\stm32f4xx_dma.c" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_dma.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\CoOS\kernel\OsKernelHeap.h" lastModified="140bb9f0680">
       </source>
       <source file="..\..\..\CoOS\kernel\sem.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
       <source file="..\..\..\LCD\AsciiLib.h" lastModified="140bb9f0298">
       </source>
-      <source file="..\..\..\Tasks\AERTask.h" lastModified="1548598ef10">
+      <source file="..\..\..\Tasks\AERTask.h" lastModified="1552685b0e2">
          <include file="..\..\..\CoOS\kernel\CoOS.h"/>
          <include file="..\..\..\AER\AERdriver.h"/>
       </source>
@@ -218,8 +218,10 @@
       <source file="..\..\..\LCD\AsciiLib.c" lastModified="140bb9efeb0">
          <include file="..\..\..\LCD\AsciiLib.h"/>
       </source>
-      <source file="..\..\..\Tasks\AERTask.c" lastModified="154962b771d">
+      <source file="..\..\..\Tasks\AERTask.c" lastModified="15526882b67">
          <include file="..\..\..\Tasks\AERTask.h"/>
+         <include file="..\..\..\LCD\LCD.h"/>
+         <include file="..\..\..\Tasks\LedTask.h"/>
       </source>
       <source file="..\..\..\CoOS\kernel\time.c" lastModified="140bb9efeb0">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
@@ -250,6 +252,15 @@
       </source>
       <source file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h" lastModified="15480fcb0f5">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\main.c" lastModified="15525fb485e">
+         <include file="..\..\..\CoOS\kernel\CoOS.h"/>
+         <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
+         <include file="..\..\..\BSP\BSP.h"/>
+         <include file="..\..\..\Tasks\LedTask.h"/>
+         <include file="..\..\..\Tasks\JoyTmr.h"/>
+         <include file="..\..\..\Tasks\LCDTask.h"/>
+         <include file="..\..\..\Tasks\AERTask.h"/>
       </source>
       <source file="..\..\..\BSP\led_driver.h" lastModified="140bb9f0680">
       </source>

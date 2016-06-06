@@ -1,4 +1,4 @@
-#include "AERdriver.h"
+#include "AER/AERdriver.h"
 
 /* Pines del bus AER */
 
@@ -50,7 +50,8 @@ void Init_AERbus(void){
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOx_BUS, ENABLE);
 
 	//3 - Relleno de la estructura de configuración
-	gpio.GPIO_Pin = AERbus;	//La configuración afecta a los pines 2 y 3
+	//gpio.GPIO_Pin = AERbus;	//La configuración afecta a los pines 2 y 3
+	gpio.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7;	//La configuración afecta a los pines 2 y 3
 	gpio.GPIO_Mode = GPIO_Mode_IN;				//Pines como salidas
 	//gpio.GPIO_Speed = GPIO_Speed_50MHz;			//Velocidad del puerto a 100MHz
 	//gpio.GPIO_OType = GPIO_OType_PP;			//La salida es en modo PushPull
@@ -72,7 +73,7 @@ void Init_AERprot(void){
 	gpio.GPIO_Mode = GPIO_Mode_IN;
 	//gpio.GPIO_Speed = GPIO_Speed_50MHz;
 	//gpio.GPIO_OType = GPIO_OType_PP;
-	gpio.GPIO_PuPd = GPIO_PuPd_NOPULL;
+	gpio.GPIO_PuPd = GPIO_PuPd_UP;
 
 	GPIO_Init(AERprot_port,&gpio);
 
@@ -128,13 +129,16 @@ void AER_downACK(void){
 }
 
 void AER_readBus(uint16_t *aer_data){
-	uint16_t data = 0;
-
-	data = GPIO_ReadInputData(AERbus_port);
-	*aer_data = data;
+	uint8_t data = 0;
+	uint16_t data_16 = 0;
+	//Podria hacer un readinputdata de 16 bits de todos los pines pero guardarlo en un uint8_t, aunque los otros pines no estén configurados?
+	data_16 = GPIO_ReadInputData(AERbus_port);
+	data = (uint8_t)GPIO_ReadInputData(AERbus_port);
+	*aer_data = ((uint16_t)data);
 }
 
-void AER_AddToBuff(uint16_t **aer_dataBuff, uint8_t pos, uint16_t aer_data, uint16_t aer_dataTimeStamp){
+//void AER_AddToBuff(uint16_t **aer_dataBuff, uint8_t pos, uint16_t aer_data, uint16_t aer_dataTimeStamp){
+void AER_AddToBuff(uint16_t aer_dataBuff[2][64], uint8_t pos, uint16_t aer_data, uint16_t aer_dataTimeStamp){
 
 	aer_dataBuff[0][pos] = aer_data;
 	aer_dataBuff[1][pos] = aer_dataTimeStamp;

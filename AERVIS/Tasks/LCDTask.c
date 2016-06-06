@@ -48,11 +48,11 @@ void LCDSonogramTask(void * parg);
 void Cocleogram(void * parg);
 
 #define STACK_SIZE_LCD 1024              /*!< Define "taskA" task size */
-OS_STK LCD_stk[2][STACK_SIZE_LCD]; /*!< Define "taskA" task stack */
+OS_STK LCD_stk[2][1024]; /*!< Define "taskA" task stack */
 
 void CreateLCDTask(void) {
 
-	Init_AnalogJoy();
+	//Init_AnalogJoy();
 
 	LCD_Initialization();
 	LCD_Clear(Blue);
@@ -85,13 +85,13 @@ void LCDManagerTask(void* pdata) {
 		waitForKey(5, 0);
 		CoDelTask(lcdId);
 
-		lcdId =CoCreateTask (LCDSonogramTask,0,1,&LCD_stk[1][STACK_SIZE_LCD-1],STACK_SIZE_LCD);
+		/*lcdId =CoCreateTask (LCDSonogramTask,0,1,&LCD_stk[1][STACK_SIZE_LCD-1],STACK_SIZE_LCD);
 						waitForKey(5, 0);
 						CoDelTask(lcdId);
 
 		lcdId =CoCreateTask (Cocleogram,0,1,&LCD_stk[1][STACK_SIZE_LCD-1],STACK_SIZE_LCD);
 		waitForKey(5, 0);
-		CoDelTask(lcdId);
+		CoDelTask(lcdId);*/
 
 
 
@@ -126,16 +126,14 @@ void LCDHelloTask(void * parg) {
 
 }
 
-void LCD_selectBuffer(uint16_t rxBuff[2][64]) {
+void LCD_selectBuffer(void) {
 	if (LCD_current_rxBuff == 0) {
 		CoPendSem(semAERRxBuff1, 50);
-		rxBuff = AERdat_rxBuff1; //-> cambiar!!!!!!!! ¿Cómo pasar un buffer de una tarea a otra?? Cola??
 	} else if (LCD_current_rxBuff == 1) {
 		CoPendSem(semAERRxBuff2, 50);
-		rxBuff = AERdat_rxBuff2;
 	}
 	LCD_has_rxBuff = 1;
-	LCD_current_rxBuff = !LCD_current_rxBuff;
+
 }
 
 void LCD_freeBuffer(void) {
@@ -145,6 +143,7 @@ void LCD_freeBuffer(void) {
 		CoPostSem(semAERRxBuff2);
 	}
 	LCD_has_rxBuff = 0;
+	LCD_current_rxBuff = !LCD_current_rxBuff;
 }
 
 void LCD_drawXYMesh(void) {
@@ -291,14 +290,14 @@ void LCDHistogramTask(void * parg) {
 	uint16_t time_end_ref = time_init_ref + HISTOGRAM_FRAME(1000);
 	uint16_t time_actual = 0;
 
-	//uint32_t numEvents_channel[NUM_CHANNELS];
-	uint32_t numEvents_channel[NUM_CHANNELS] = { 5000, 4000, 1000, 7500, 8000,
+	uint32_t numEvents_channel[NUM_CHANNELS];
+	/*uint32_t numEvents_channel[NUM_CHANNELS] = { 5000, 4000, 1000, 7500, 8000,
 			600, 2500, 100, 5000, 4000, 1000, 7500, 8000, 600, 2500, 100, 5000,
 			4000, 1000, 7500, 8000, 600, 2500, 100, 5000, 4000, 1000, 7500,
 			8000, 600, 2500, 100, 5000, 4000, 1000, 7500, 8000, 600, 2500, 100,
 			5000, 4000, 1000, 7500, 8000, 600, 2500, 100, 5000, 4000, 1000,
 			7500, 8000, 600, 2500, 100, 5000, 4000, 1000, 7500, 8000, 600, 2500,
-			100 };
+			100 };*/
 
 	/* Preparacion de la pantalla de fondo en negro 320 x 205 */
 	LCD_FillRectangle(0, 0, 320, 205, White);
@@ -306,6 +305,10 @@ void LCDHistogramTask(void * parg) {
 	LCD_drawXYMesh();
 
 	AERdatBuff_index = 0;
+
+	uint8_t izqu_der = 0;
+	uint8_t canal = 0;
+	uint8_t polaridad = 0;
 
 	// Bucle principal
 	for (;;) {
@@ -317,19 +320,33 @@ void LCDHistogramTask(void * parg) {
 		if (!LCD_isBusy) {
 			//Primero esperamos a que se levante la bandera indicando que hay un buffer listo
 			CoWaitForSingleFlag(flagRxAERBuff_Ready, 0);
+			CoClearFlag(flagRxAERBuff_Ready);
 
 			//Una vez se levante la bandera, tengo que coger el semáforo del buffer correspondiente
 			if (!LCD_has_rxBuff) {
-				LCD_selectBuffer(AERdatBuff);
+				LCD_selectBuffer();
 				LCD_isBusy = 1;
 			}
 		} else {
 			//Una vez tengamos el buffer, aqui empezamos a leer el buffer, y leemos de la posicion correspondiente
 			if (time_actual <= time_end_ref) {
-				event_channel = AERdatBuff[0][AERdatBuff_index];
-				numEvents_channel[event_channel] =
-						numEvents_channel[event_channel] + 1;
-				time_actual = AERdatBuff[1][AERdatBuff_index];
+
+				if (LCD_current_rxBuff == 0) {
+					event_channel = AERdat_rxBuff1[0][AERdatBuff_index];
+				} else if (LCD_current_rxBuff == 1) {
+					event_channel = AERdat_rxBuff2[0][AERdatBuff_index];
+				}
+
+				decodeAERData((uint8_t)event_channel,&izqu_der, &canal, &polaridad);
+
+				numEvents_channel[event_channel] = numEvents_channel[event_channel] + 1;
+
+				if (LCD_current_rxBuff == 0) {
+					time_actual = AERdat_rxBuff1[1][AERdatBuff_index];
+				} else if (LCD_current_rxBuff == 1) {
+					time_actual = AERdat_rxBuff2[1][AERdatBuff_index];
+				}
+
 				AERdatBuff_index++;
 
 				if (AERdatBuff_index == 64) {
@@ -339,8 +356,9 @@ void LCDHistogramTask(void * parg) {
 						AERdatBuff_index = 0;
 					}
 					CoWaitForSingleFlag(flagRxAERBuff_Ready, 0);
+					CoClearFlag(flagRxAERBuff_Ready);
 					if (!LCD_has_rxBuff) {
-						LCD_selectBuffer(AERdatBuff);
+						LCD_selectBuffer();
 					}
 				}
 			} else {
@@ -356,7 +374,7 @@ void LCDHistogramTask(void * parg) {
 	}
 
 }
-
+/*
 void LCDSonogramTask(void * parg) {
 
 	//variable event_channel para el canal donde se ha producido el evento (eje X)
@@ -450,7 +468,7 @@ void Cocleogram(void * parg){
 		LCD_DrawLine(10, 220, 10, 0, White);
 		LCD_DrawLine(320, 220, 0, 220, White);
 		for(;;){
-
+			CoTimeDelay(0,0,1,0);
 		}
 }
 
@@ -472,4 +490,23 @@ void ClearScreenSonogram() {
 	LCD_PrintText(10, 224, "Sonogram", White, Blue);
 	LCD_DrawLine(10, 220, 10, 0, White);
 	LCD_DrawLine(320, 220, 0, 220, White);
+}
+*/
+
+void decodeAERData(uint8_t AERdataIn, uint8_t* AER_LRChannel, uint8_t* AER_IDChannel, uint8_t* AER_Polarity){
+	uint8_t lr = 0;
+	uint8_t chann = 0;
+	uint8_t polarit = 0;
+
+	lr = AERdataIn & 0x80;
+	lr = lr >> 7;
+
+	chann = AERdataIn & 0x7E;
+	chann = chann >> 1;
+
+	polarit = AERdataIn & 0x01;
+
+	*AER_LRChannel = lr;
+	*AER_IDChannel = chann;
+	*AER_Polarity = polarit;
 }

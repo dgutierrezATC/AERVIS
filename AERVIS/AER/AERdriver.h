@@ -12,6 +12,7 @@ void AER_downACK(void);
 
 void AER_readBus(uint16_t *aer_data);
 
-void AER_AddToBuff(uint16_t **aer_dataBuff, uint8_t pos, uint16_t aer_data, uint16_t aer_dataTimeStamp);
+//void AER_AddToBuff(uint16_t **aer_dataBuff, uint8_t pos, uint16_t aer_data, uint16_t aer_dataTimeStamp);
+void AER_AddToBuff(uint16_t aer_dataBuff[2][64], uint8_t pos, uint16_t aer_data, uint16_t aer_dataTimeStamp);
 
 uint32_t AER_getTimeStamp(void);

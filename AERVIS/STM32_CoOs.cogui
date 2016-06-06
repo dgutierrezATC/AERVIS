@@ -16,17 +16,27 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="AERTask.c" partName="AERTask.c" path="C:/Proyectos/Universidad/Proyecto_SSOOSE/AERVIS/Tasks/AERTask.c" title="AERTask.c" tooltip="C:/Proyectos/Universidad/Proyecto_SSOOSE/AERVIS/Tasks/AERTask.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="AERTask.c" partName="AERTask.c" path="C:/Proyectos/Universidad/Proyecto_SSOOSE/Repositorio/AERVIS/AERVIS/Tasks/AERTask.c" title="AERTask.c" tooltip="C:/Proyectos/Universidad/Proyecto_SSOOSE/Repositorio/AERVIS/AERVIS/Tasks/AERTask.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/STM32_CoOs/Tasks/AERTask.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="1" selectionOffset="3016" selectionTopPixel="1391"/>
+<editorState selectionHorizontalPixel="0" selectionLength="1" selectionOffset="4001" selectionTopPixel="1267"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="AERdriver.c" partName="AERdriver.c" path="C:/Proyectos/Universidad/Proyecto_SSOOSE/AERVIS/AER/AERdriver.c" title="AERdriver.c" tooltip="C:/Proyectos/Universidad/Proyecto_SSOOSE/AERVIS/AER/AERdriver.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/STM32_CoOs/AER/AERdriver.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="13" selectionOffset="3600" selectionTopPixel="949"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="LCDTask.c" partName="LCDTask.c" path="C:/Proyectos/Universidad/Proyecto_SSOOSE/Repositorio/AERVIS/AERVIS/Tasks/LCDTask.c" title="LCDTask.c" tooltip="C:/Proyectos/Universidad/Proyecto_SSOOSE/Repositorio/AERVIS/AERVIS/Tasks/LCDTask.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/STM32_CoOs/Tasks/LCDTask.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9807" selectionTopPixel="5644"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="LCDTask.h" partName="LCDTask.h" path="C:/Proyectos/Universidad/Proyecto_SSOOSE/Repositorio/AERVIS/AERVIS/Tasks/LCDTask.h" title="LCDTask.h" tooltip="C:/Proyectos/Universidad/Proyecto_SSOOSE/Repositorio/AERVIS/AERVIS/Tasks/LCDTask.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/STM32_CoOs/Tasks/LCDTask.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="250" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Proyectos/Universidad/Proyecto_SSOOSE/Repositorio/AERVIS/AERVIS/main.c" title="main.c" tooltip="C:/Proyectos/Universidad/Proyecto_SSOOSE/Repositorio/AERVIS/AERVIS/main.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/STM32_CoOs/main.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="516" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -44,22 +54,24 @@
 <viewState/>
 </view>
 <view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
-<viewState CommonNavigator.LINKING_ENABLED="1" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="2">
+<viewState CommonNavigator.LINKING_ENABLED="1" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="60">
 <expanded>
 <element path="/STM32_CoOs"/>
 <element path="/STM32_CoOs/AER"/>
 <element path="/STM32_CoOs/BSP"/>
 <element path="/STM32_CoOs/cmsis_boot"/>
+<element path="/STM32_CoOs/cmsis_boot/startup"/>
 <element path="/STM32_CoOs/cmsis_lib"/>
 <element path="/STM32_CoOs/cmsis_lib/include"/>
 <element path="/STM32_CoOs/cmsis_lib/source"/>
 <element path="/STM32_CoOs/CoOs"/>
 <element path="/STM32_CoOs/CoOs/kernel"/>
+<element path="/STM32_CoOs/CoOs/portable"/>
 <element path="/STM32_CoOs/LCD"/>
 <element path="/STM32_CoOs/Tasks"/>
 </expanded>
 <selection>
-<element path="/STM32_CoOs/AER/AERdriver.c"/>
+<element path="/STM32_CoOs/Tasks/LCDTask.c"/>
 </selection>
 </viewState>
 </view>
@@ -196,8 +208,8 @@
 <hide_menu_item_id id="org.coocox.builder.rcp.flashMenu"/>
 <hide_menu_item_id id="org.coocox.builder.ui.debug"/>
 <hide_menu_item_id id="org.coocox.builder.ui.showHelpViewAction"/>
-<hide_menu_item_id id="org.coocox.builder.ui.newFile"/>
 <hide_menu_item_id id="org.coocox.builder.ui.showHelpViewAction1"/>
+<hide_menu_item_id id="org.coocox.builder.ui.newFile"/>
 <hide_menu_item_id id="org.coocox.builder.ui.actions.ConfigurationAction"/>
 <hide_menu_item_id id="org.coocox.builder.ui.builderDefaultLayout"/>
 <hide_menu_item_id id="org.eclipse.jdt.ui.source.menu"/>
@@ -218,8 +230,8 @@
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <hide_toolbar_item_id id="org.coocox.builder.ui.build"/>
 <hide_toolbar_item_id id="org.coocox.welcome.ui.action.welcome"/>
-<hide_toolbar_item_id id="org.coocox.component.ui.ShowRepositoryAction"/>
 <hide_toolbar_item_id id="org.coocox.codebugger.configuration.coideProgramDownloadAction"/>
+<hide_toolbar_item_id id="org.coocox.component.ui.ShowRepositoryAction"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
 <view id="org.coocox.codebugger.trace.ui.traceview"/>
@@ -231,24 +243,36 @@
 <view id="org.coocox.builder.ui.views.ProjectView"/>
 <fastViewBars/>
 <viewLayoutRec closeable="false" id="org.eclipse.debug.ui.DebugView"/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.ui.internal.ViewStack@1bdb01d">&#x0A;<folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">&#x0A;<page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1bdb01d">
+<folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">
+<page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.7497309" ratioLeft="1393" ratioRight="465" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1bdb01d">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.7497309" ratioLeft="1393" ratioRight="465" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1bdb01d">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@15aeef0" ratio="0.5970149" ratioLeft="560" ratioRight="378" relationship="4" relative="org.eclipse.ui.internal.ViewStack@1bdb01d">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@15aeef0" ratio="0.5970149" ratioLeft="560" ratioRight="378" relationship="4" relative="org.eclipse.ui.internal.ViewStack@1bdb01d">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@fd007f" ratio="0.5" ratioLeft="929" ratioRight="929" relationship="2" relative="org.eclipse.ui.internal.ViewStack@15aeef0">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.coocox.codebugger.trace.ui.traceview" label="Semihosting"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@fd007f" ratio="0.61158323" ratioLeft="1943" ratioRight="1234" relationship="2" relative="org.eclipse.ui.internal.ViewStack@15aeef0">
+<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
+<page content="org.coocox.codebugger.trace.ui.traceview" label="Semihosting"/>
 <page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
@@ -256,7 +280,8 @@
 <page content="org.coocox.component.ui.ComponentView" label="Components"/>
 <page content="org.eclipse.debug.ui.MemoryView" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
@@ -265,14 +290,16 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@2b9eaa" ratio="0.7497309" ratioLeft="1393" ratioRight="465" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1bdb01d">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@2b9eaa" ratio="0.7497309" ratioLeft="1393" ratioRight="465" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1bdb01d">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
 <page content="org.coocox.coassistant.view.CoAssistantView_debug" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.10670851" ratioLeft="272" ratioRight="2277" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1bdb01d"/>
+<info part="org.eclipse.ui.editorss" ratio="0.08561536" ratioLeft="272" ratioRight="2905" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1bdb01d"/>
 </mainWindow>
 </layout>
 </perspective>
@@ -280,169 +307,160 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STM32_CoOs/AER/AERdriver.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STM32_CoOs/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STM32_CoOs/Tasks/LCDTask.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STM32_CoOs/Tasks/AERTask.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STM32_CoOs/CoOs/kernel/mutex.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STM32_CoOs/CoOs/kernel/mm.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STM32_CoOs/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STM32_CoOs/AER/AERdriver.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STM32_CoOs/cmsis_lib/include/stm32f4xx_gpio.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STM32_CoOs/Tasks/LCDTask.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STM32_CoOs/Tasks/AERTask.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STM32_CoOs/Tasks/LCDTask.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STM32_CoOs/Tasks/LCDTask.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STM32_CoOs/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STM32_CoOs/main.c"/>
 </editors>
-<item historyLabel="LCDTask.c" index="2">
-<position info="not_deleted" x="9443" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="9805" y="0"/>
 </item>
-<item historyLabel="AERdriver.c" index="0">
-<position info="not_deleted" x="3600" y="13"/>
+<item historyLabel="main.c" index="2">
+<position info="not_deleted" x="516" y="0"/>
 </item>
-<item historyLabel="AERTask.c" index="3">
-<position info="not_deleted" x="3462" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="9286" y="0"/>
 </item>
-<item historyLabel="mutex.c" index="4">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="9313" y="0"/>
 </item>
-<item historyLabel="mm.c" index="5">
-<position info="not_deleted" x="330" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="9338" y="0"/>
 </item>
-<item historyLabel="mutex.c" index="4">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="8842" y="0"/>
 </item>
-<item historyLabel="AERTask.c" index="3">
-<position info="not_deleted" x="3462" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="8997" y="0"/>
 </item>
-<item historyLabel="LCDTask.c" index="2">
-<position info="not_deleted" x="9443" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="9484" y="0"/>
 </item>
-<item historyLabel="LCDTask.c" index="2">
-<position info="not_deleted" x="8494" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="9525" y="0"/>
 </item>
-<item historyLabel="LCDTask.c" index="2">
-<position info="not_deleted" x="3874" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="9506" y="12"/>
 </item>
-<item historyLabel="AERdriver.c" index="0">
-<position info="not_deleted" x="383" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="9561" y="0"/>
 </item>
-<item historyLabel="LCDTask.c" index="2">
-<position info="not_deleted" x="3874" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="9731" y="0"/>
 </item>
-<item historyLabel="AERTask.c" index="3">
-<position info="not_deleted" x="3462" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14656" y="0"/>
 </item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14674" y="0"/>
 </item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="688" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14695" y="0"/>
 </item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="472" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14720" y="0"/>
 </item>
-<item historyLabel="AERTask.c" index="3">
-<position info="not_deleted" x="1041" y="13"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14745" y="0"/>
 </item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="472" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14763" y="0"/>
 </item>
-<item historyLabel="main.c" index="1">
-<position info="not_deleted" x="151" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14791" y="0"/>
 </item>
-<item historyLabel="AERTask.c" index="3">
-<position info="not_deleted" x="1094" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14815" y="0"/>
 </item>
-<item historyLabel="LCDTask.c" index="2">
-<position info="not_deleted" x="3874" y="0"/>
+<item historyLabel="AERTask.c" index="0">
+<position info="not_deleted" x="4001" y="1"/>
 </item>
-<item historyLabel="main.c" index="6">
-<position info="not_deleted" x="467" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14815" y="0"/>
 </item>
-<item historyLabel="AERdriver.c" index="7">
-<position info="not_deleted" x="610" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14847" y="0"/>
 </item>
-<item historyLabel="stm32f4xx_gpio.h" index="8">
-<position info="not_deleted" x="6488" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14870" y="0"/>
 </item>
-<item historyLabel="AERdriver.c" index="7">
-<position info="not_deleted" x="3471" y="11"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14896" y="0"/>
 </item>
-<item historyLabel="stm32f4xx_gpio.h" index="8">
-<position info="not_deleted" x="6488" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14923" y="0"/>
 </item>
-<item historyLabel="main.c" index="6">
-<position info="not_deleted" x="467" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="9792" y="0"/>
 </item>
-<item historyLabel="LCDTask.c" index="9">
-<position info="not_deleted" x="7599" y="0"/>
+<item historyLabel="main.c" index="3">
+<position info="not_deleted" x="516" y="0"/>
 </item>
-<item historyLabel="AERTask.c" index="10">
-<position info="not_deleted" x="1094" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="9286" y="0"/>
 </item>
-<item historyLabel="AERTask.c" index="10">
-<position info="not_deleted" x="2534" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="9313" y="0"/>
 </item>
-<item historyLabel="AERTask.c" index="10">
-<position info="not_deleted" x="2713" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="9338" y="0"/>
 </item>
-<item historyLabel="AERdriver.c" index="7">
-<position info="not_deleted" x="3600" y="13"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="8842" y="0"/>
 </item>
-<item historyLabel="AERTask.c" index="10">
-<position info="not_deleted" x="3016" y="1"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="8997" y="0"/>
 </item>
-<item historyLabel="LCDTask.c" index="11">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="9484" y="0"/>
 </item>
-<item historyLabel="LCDTask.c" index="11">
-<position info="not_deleted" x="8760" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="9525" y="0"/>
 </item>
-<item historyLabel="LCDTask.c" index="11">
-<position info="not_deleted" x="9202" y="532"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="9561" y="0"/>
 </item>
-<item historyLabel="AERdriver.c" index="7">
-<position info="not_deleted" x="3600" y="13"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="9731" y="0"/>
 </item>
-<item historyLabel="AERTask.c" index="10">
-<position info="not_deleted" x="3016" y="1"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14656" y="0"/>
 </item>
-<item historyLabel="LCDTask.c" index="11">
-<position info="not_deleted" x="9202" y="532"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14674" y="0"/>
 </item>
-<item historyLabel="LCDTask.c" index="11">
-<position info="not_deleted" x="9944" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14695" y="0"/>
 </item>
-<item historyLabel="LCDTask.c" index="11">
-<position info="not_deleted" x="4976" y="31"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14720" y="0"/>
 </item>
-<item historyLabel="AERTask.c" index="10">
-<position info="not_deleted" x="3016" y="1"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14745" y="0"/>
 </item>
-<item historyLabel="LCDTask.c" index="11">
-<position info="not_deleted" x="4976" y="31"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14763" y="0"/>
 </item>
-<item historyLabel="LCDTask.c" index="11">
-<position info="not_deleted" x="10078" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14791" y="0"/>
 </item>
-<item historyLabel="LCDTask.c" index="11">
-<position info="not_deleted" x="8528" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14815" y="0"/>
 </item>
-<item historyLabel="AERdriver.c" index="7">
-<position info="not_deleted" x="3600" y="13"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14847" y="0"/>
 </item>
-<item historyLabel="LCDTask.c" index="11">
-<position info="not_deleted" x="8528" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14870" y="0"/>
 </item>
-<item historyLabel="AERdriver.c" index="7">
-<position info="not_deleted" x="3600" y="13"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14896" y="0"/>
 </item>
-<item historyLabel="LCDTask.c" index="12">
-<position info="not_deleted" x="8528" y="0"/>
+<item historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="14923" y="0"/>
 </item>
-<item active="true" historyLabel="AERdriver.c" index="7">
-<position info="not_deleted" x="3600" y="13"/>
+<item active="true" historyLabel="LCDTask.c" index="1">
+<position info="not_deleted" x="9807" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -451,50 +469,47 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Drone.h" tooltip="Firmware_Pulsera/Drone/Drone.h">
-<persistable path="/Firmware_Pulsera/Drone/Drone.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="STM32_CoOs/main.c">
+<persistable path="/STM32_CoOs/main.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="pulsera.c" tooltip="Firmware_Pulsera/Pulsera/pulsera.c">
-<persistable path="/Firmware_Pulsera/Pulsera/pulsera.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LCDTask.h" tooltip="STM32_CoOs/Tasks/LCDTask.h">
+<persistable path="/STM32_CoOs/Tasks/LCDTask.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="Firmware_Pulsera/main.c">
-<persistable path="/Firmware_Pulsera/main.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="hook.c" tooltip="STM32_CoOs/CoOs/kernel/hook.c">
+<persistable path="/STM32_CoOs/CoOs/kernel/hook.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="uart.c" tooltip="Firmware_Pulsera/Serial/uart.c">
-<persistable path="/Firmware_Pulsera/Serial/uart.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="AERdriver.c" tooltip="STM32_CoOs/AER/AERdriver.c">
+<persistable path="/STM32_CoOs/AER/AERdriver.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_it.c" tooltip="Firmware_Pulsera/Others/stm32f10x_it.c">
-<persistable path="/Firmware_Pulsera/Others/stm32f10x_it.c"/>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="string.h" tooltip="C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\include\string.h">
+<persistable path="C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\include\string.h" project="STM32_CoOs"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="mavlink.c" tooltip="Firmware_Pulsera/Mavlink/mavlink.c">
-<persistable path="/Firmware_Pulsera/Mavlink/mavlink.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="AERTask.h" tooltip="STM32_CoOs/Tasks/AERTask.h">
+<persistable path="/STM32_CoOs/Tasks/AERTask.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="FLASH.c" tooltip="Firmware_Pulsera/FLASH/FLASH.c">
-<persistable path="/Firmware_Pulsera/FLASH/FLASH.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_stm32f4xx.c" tooltip="STM32_CoOs/cmsis_boot/startup/startup_stm32f4xx.c">
+<persistable path="/STM32_CoOs/cmsis_boot/startup/startup_stm32f4xx.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ParserNMEA.c" tooltip="Firmware_Pulsera/GPS/ParserNMEA.c">
-<persistable path="/Firmware_Pulsera/GPS/ParserNMEA.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="AERdriver.h" tooltip="STM32_CoOs/AER/AERdriver.h">
+<persistable path="/STM32_CoOs/AER/AERdriver.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Drone.c" tooltip="Firmware_Pulsera/Drone/Drone.c">
-<persistable path="/Firmware_Pulsera/Drone/Drone.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx.h" tooltip="STM32_CoOs/cmsis_boot/stm32f4xx.h">
+<persistable path="/STM32_CoOs/cmsis_boot/stm32f4xx.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Button.c" tooltip="Firmware_Pulsera/Buttons/Button.c">
-<persistable path="/Firmware_Pulsera/Buttons/Button.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_tim.c" tooltip="STM32_CoOs/cmsis_lib/source/stm32f4xx_tim.c">
+<persistable path="/STM32_CoOs/cmsis_lib/source/stm32f4xx_tim.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LED.h" tooltip="Firmware_Pulsera/LEDs/LED.h">
-<persistable path="/Firmware_Pulsera/LEDs/LED.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="CoOS.h" tooltip="STM32_CoOs/CoOs/kernel/CoOS.h">
+<persistable path="/STM32_CoOs/CoOs/kernel/CoOS.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="mavlink.h" tooltip="Firmware_Pulsera/Mavlink/mavlink.h">
-<persistable path="/Firmware_Pulsera/Mavlink/mavlink.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LCD.c" tooltip="STM32_CoOs/LCD/LCD.c">
+<persistable path="/STM32_CoOs/LCD/LCD.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Utils.c" tooltip="freertos_Target/fixedNode/Utils.c">
-<persistable path="/freertos_Target/fixedNode/Utils.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LCDTask.c" tooltip="STM32_CoOs/Tasks/LCDTask.c">
+<persistable path="/STM32_CoOs/Tasks/LCDTask.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Systick.c" tooltip="Firmware_Pulsera/Others/Systick.c">
-<persistable path="/Firmware_Pulsera/Others/Systick.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_rcc.h" tooltip="STM32_CoOs/cmsis_lib/include/stm32f4xx_rcc.h">
-<persistable path="/STM32_CoOs/cmsis_lib/include/stm32f4xx_rcc.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LedTask.c" tooltip="STM32_CoOs/Tasks/LedTask.c">
+<persistable path="/STM32_CoOs/Tasks/LedTask.c"/>
 </file>
 </mruList>
 </workbench>

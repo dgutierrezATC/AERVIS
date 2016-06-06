@@ -1,10 +1,15 @@
 #include "AERTask.h"
+#include "LCD.h"
+#include "LedTask.h"
+#include <stdio.h>
+#include <string.h>
+
 
 /*---------------------------- Symbol Define -------------------------------*/
-#define STACK_SIZE_AER 256              /*!< Define "taskA" task size */
+#define STACK_SIZE_AER 512              /*!< Define "taskA" task size */
 
 /*---------------------------- Variable Define -------------------------------*/
-OS_STK aer_stk[4][STACK_SIZE_AER];	  /*!< Define "taskA" task stack */
+OS_STK aer_stk[2][512];	  /*!< Define "taskA" task stack */
 
 OS_EventID semAERRxBuff1;
 OS_EventID semAERRxBuff2;
@@ -29,21 +34,38 @@ void CreateAER_OSRsrc(void){
 }
 
 void CreateAERTask(void){
-	Init_AER();
+	//Init_AER();
+	Init_AERbus();
+	Init_AERprot();
+	Init_AERtimestamp();
 	CreateAER_OSRsrc();
-	CoCreateTask(AER_RxTask,0,3, aer_stk[0][STACK_SIZE_AER - 1], STACK_SIZE_AER);
+	CoCreateTask(AER_RxTask,0,3, &aer_stk[1][STACK_SIZE_AER - 1], STACK_SIZE_AER);
 }
 
-void AER_selectBuffer(uint16_t rxBuff[2][64]){
+void AER_selectBuffer(void){
 	if(current_rxBuff == 0){
 		CoPendSem(semAERRxBuff1, 50);
-		rxBuff = AERdat_rxBuff1;
 	}else if(current_rxBuff == 1){
 		CoPendSem(semAERRxBuff2, 50);
-		rxBuff = AERdat_rxBuff2;
 	}
 	has_rxBuff = 1;
-	current_rxBuff = !current_rxBuff;
+}
+
+void AER_addData(uint16_t rxBuff_in[2][64]){
+	/*if(current_rxBuff == 0){
+		memcpy(AERdat_rxBuff1, rxBuff_in, 64*sizeof(uint16_t)*2);
+	}else if(current_rxBuff == 1){
+		memcpy(AERdat_rxBuff2, rxBuff_in, 64*sizeof(uint16_t)*2);
+	}*/
+
+	/*if(current_rxBuff == 0){
+		AERdat_rxBuff1[0][rxBuff_index] = aer_data;
+		AERdat_rxBuff1[1][rxBuff_index] = aer_dataTimeStamp;
+	}else if(current_rxBuff == 1){
+		AERdat_rxBuff2[0][rxBuff_index] = aer_data;
+		AERdat_rxBuff2[1][rxBuff_index] = aer_dataTimeStamp;
+	}*/
+
 }
 
 void AER_freeBuffer(void){
@@ -52,6 +74,7 @@ void AER_freeBuffer(void){
 	}else if(current_rxBuff == 1){
 		CoPostSem(semAERRxBuff2);
 	}
+	current_rxBuff = !current_rxBuff;
 	has_rxBuff = 0;
 }
 
@@ -65,8 +88,6 @@ void AER_RxTask(void * parg){
 
 	uint16_t AERdat_rxData; /*Dato capturado del bus AER*/
 
-	uint16_t rxBuff[2][64];
-
 	AER_upACK(); //Aquí o en la inicializacion de los puertos?????????????
 
 	while(1){
@@ -79,26 +100,31 @@ void AER_RxTask(void * parg){
 			AER_readBus(&AERdat_rxData);
 
 			//Y luego guardamos el timeStamp del Timer
-			aer_data_timestamp = AER_getTimeStamp();
+			aer_data_timestamp = AER_getTimeStamp(); //Devuelve un uint32. MSB o LSB si vble es 16bits??
 
 			//Una vez leido el dato, es cuando bajamos el ACK
 			AER_downACK();
 
 			//Despues tenemos que saber que buffer vamos a usar (sincronizar con los semáforos)
 			if(!has_rxBuff){
-				AER_selectBuffer(rxBuff);
+				AER_selectBuffer();
 			}
 
-			//Cuando sepamos el buffer a usar, hay que "seleccionarlo"
-
 			//Una vez sepamos el buffer almacenamos los datos en la posicion correcta
-			AER_AddToBuff(rxBuff, rxBuff_index, AERdat_rxData, aer_data_timestamp);
+			if(current_rxBuff == 0){
+				AERdat_rxBuff1[0][rxBuff_index] = AERdat_rxData;
+				AERdat_rxBuff1[1][rxBuff_index] = aer_data_timestamp;
+			}else if(current_rxBuff == 1){
+				AERdat_rxBuff2[0][rxBuff_index] = AERdat_rxData;
+				AERdat_rxBuff2[1][rxBuff_index] = aer_data_timestamp;
+			}
 
 			//Y actualizamos el indice de escritura del buffer
 			rxBuff_index++;
 
 			//Hay que comprobar si se ha llegado al final del buffer, para liberarlo, que lo coja la tarea de pintar, y acceder al otro buffer
 			if(rxBuff_index == 64){
+
 				//Liberamos el semáforo del buffer
 				if(has_rxBuff){
 					AER_freeBuffer();
@@ -113,6 +139,8 @@ void AER_RxTask(void * parg){
 		}else if(reqState_new && !reqState){//Si el reqState_new vale 1 y el reqState vale 0, entonces hay flanco de subida
 			AER_upACK();
 		}
+
+		reqState = reqState_new;
 
 		CoTimeDelay(0,0,0,1);
 	}
