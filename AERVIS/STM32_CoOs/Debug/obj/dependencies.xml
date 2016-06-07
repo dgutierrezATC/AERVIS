@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dependencies>
-   <includePath signature="/I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\cmsis_lib\include /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\CoOS\portable /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\cmsis_boot /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\cmsis_lib /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\LCD /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\Tasks /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\BSP /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\AER /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\CoOS /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\CoOS\kernel /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\cmsis">
+   <includePath signature="/I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\cmsis_lib\include /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\CoOS\portable /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\cmsis_boot /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\cmsis_lib /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\LCD /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\Tasks /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\BSP /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\AER /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\CoOS /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\CoOS\kernel /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\cmsis">
       <source file="..\..\..\BSP\analogJoy_driver.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\CoOS.h"/>
          <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
@@ -52,7 +52,7 @@
       </source>
       <source file="..\..\..\Tasks\JoyTmr.h" lastModified="140bb9f0680">
       </source>
-      <source file="..\..\..\AER\AERdriver.c" lastModified="15526397209">
+      <source file="..\..\..\AER\AERdriver.c" lastModified="1552b3a83f0">
          <include file="..\..\..\AER\AERdriver.h"/>
       </source>
       <source file="..\..\..\cmsis_boot\stm32f4xx.h" lastModified="140bb9f0298">
@@ -79,12 +79,16 @@
       </source>
       <source file="..\..\..\Tasks\LCDTask.h" lastModified="15526ad5229">
       </source>
-      <source file="..\..\..\Tasks\LCDTask.c" lastModified="15526b25c3a">
+      <source file="..\..\..\All.h" lastModified="1552a507430">
          <include file="..\..\..\CoOS\kernel\CoOS.h"/>
          <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
          <include file="..\..\..\LCD\LCD.h"/>
          <include file="..\..\..\Tasks\LedTask.h"/>
          <include file="..\..\..\BSP\BSP.h"/>
+         <include file="..\..\..\LCD\LCDUtils.h"/>
+      </source>
+      <source file="..\..\..\Tasks\LCDTask.c" lastModified="1552b4e0356">
+         <include file="..\..\..\All.h"/>
       </source>
       <source file="..\..\..\cmsis_lib\include\stm32f4xx_dma.h" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
@@ -121,10 +125,10 @@
       </source>
       <source file="..\..\..\CoOS\kernel\OsConfig.h" lastModified="140bb9f0680">
       </source>
+      <source file="..\..\..\stdio\printf.c" lastModified="140bb9f0680">
+      </source>
       <source file="..\..\..\CoOS\kernel\mutex.c" lastModified="140bb9efeb0">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
-      </source>
-      <source file="..\..\..\stdio\printf.c" lastModified="140bb9f0680">
       </source>
       <source file="..\..\..\CoOS\kernel\hook.c" lastModified="140bb9efeb0">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
@@ -194,18 +198,18 @@
       <source file="..\..\..\CoOS\kernel\queue.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
+      <source file="..\..\..\CoOS\kernel\OsKernelHeap.h" lastModified="140bb9f0680">
+      </source>
       <source file="..\..\..\cmsis_lib\source\stm32f4xx_dma.c" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_dma.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
-      </source>
-      <source file="..\..\..\CoOS\kernel\OsKernelHeap.h" lastModified="140bb9f0680">
       </source>
       <source file="..\..\..\CoOS\kernel\sem.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
       <source file="..\..\..\LCD\AsciiLib.h" lastModified="140bb9f0298">
       </source>
-      <source file="..\..\..\Tasks\AERTask.h" lastModified="1552685b0e2">
+      <source file="..\..\..\Tasks\AERTask.h" lastModified="1552a2a0fe7">
          <include file="..\..\..\CoOS\kernel\CoOS.h"/>
          <include file="..\..\..\AER\AERdriver.h"/>
       </source>
@@ -218,7 +222,7 @@
       <source file="..\..\..\LCD\AsciiLib.c" lastModified="140bb9efeb0">
          <include file="..\..\..\LCD\AsciiLib.h"/>
       </source>
-      <source file="..\..\..\Tasks\AERTask.c" lastModified="15526882b67">
+      <source file="..\..\..\Tasks\AERTask.c" lastModified="1552b47a9c5">
          <include file="..\..\..\Tasks\AERTask.h"/>
          <include file="..\..\..\LCD\LCD.h"/>
          <include file="..\..\..\Tasks\LedTask.h"/>
@@ -245,7 +249,7 @@
       </source>
       <source file="..\..\..\cmsis\core_cm4_simd.h" lastModified="140bb9f0a68">
       </source>
-      <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="140bb9efeb0">
+      <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="1552a12f361">
       </source>
       <source file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
@@ -253,7 +257,9 @@
       <source file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h" lastModified="15480fcb0f5">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
-      <source file="..\..\..\main.c" lastModified="15525fb485e">
+      <source file="..\..\..\LCD\LCDUtils.h" lastModified="1552a97fabe">
+      </source>
+      <source file="..\..\..\main.c" lastModified="1552b474ecb">
          <include file="..\..\..\CoOS\kernel\CoOS.h"/>
          <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
          <include file="..\..\..\BSP\BSP.h"/>
@@ -266,21 +272,21 @@
       </source>
       <source file="..\..\..\CoOS\kernel\OsMM.h" lastModified="140bb9f0680">
       </source>
-      <source file="..\..\..\CoOS\kernel\timer.c" lastModified="140bb9f0680">
-         <include file="..\..\..\CoOS\kernel\coocox.h"/>
-      </source>
       <source file="..\..\..\cmsis_lib\source\stm32f4xx_adc.c" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_adc.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\CoOS\kernel\timer.c" lastModified="140bb9f0680">
+         <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
       <source file="..\..\..\BSP\led_driver.c" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
          <include file="..\..\..\BSP\led_driver.h"/>
       </source>
+      <source file="..\..\..\BSP\analogJoy_driver.h" lastModified="140bb9f0680">
+      </source>
       <source file="..\..\..\CoOS\portable\arch.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
-      </source>
-      <source file="..\..\..\BSP\analogJoy_driver.h" lastModified="140bb9f0680">
       </source>
    </includePath>
 </dependencies>

@@ -95,7 +95,7 @@ void Init_AERtimestamp(void){
 	/* -----------------------------------------------------------------------
 	TIM14 Configuration: Output Compare Timing Mode:
 	*/
-	//  TIM_TimeBaseStructure.TIM_Prescaler = 83;
+	//TIM_TimeBaseStructure.TIM_Prescaler = 83;
 	TIM_TimeBaseStructure.TIM_Prescaler = 41;
 	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
 	TIM_TimeBaseStructure.TIM_Period = 65535;

@@ -16,7 +16,7 @@ void CreateSystemObjetcs(void){
 
 void CreateUserTasks(void){
 	//Creación de las tareas de usuario
-	CreateLedTask();
+	//CreateLedTask();
 	CreateJoyTask();
 	CreateAERTask();
 	CreateLCDTask();
