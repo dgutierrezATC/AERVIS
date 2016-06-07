@@ -55,3 +55,38 @@ void AER_clearNumEventsChannelBuffer(uint32_t *num_events_channel, uint8_t num_c
 		num_events_channel[channel_index] = 0;
 	}
 }
+void SonogramPaint(uint32_t *num_events_channel, int *paint_index) {
+
+	int i;
+	int max_channel_index = 0;
+	int max_channel_value = 0;
+	int first = 1;
+	for (i = 0; i < 63; i++) {
+		if (first) {
+			max_channel_index = i;
+			max_channel_value = num_events_channel[i];
+			first = 0;
+		} else if (max_channel_value <= num_events_channel[i]) {
+			max_channel_index = i;
+			max_channel_value = num_events_channel[i];
+
+		}
+
+	}
+	for (i = 0; i < 63; i++) {
+		if (num_events_channel[i] = max_channel_value)
+			LCD_FillCircle(20 + paint_index, 220 - i, 1, Red);
+		else if (num_events_channel[i] > max_channel_value/2)
+			LCD_FillCircle(20 + paint_index, 220 - i, 1, Yellow);
+		else
+			LCD_FillCircle(20 + paint_index, 220 - i, 1, Green);
+	}
+
+}
+void ClearScreenSonogram() {
+
+	LCD_Clear(Blue);
+	LCD_PrintText(10, 224, "Sonogram", White, Blue);
+	LCD_DrawLine(10, 220, 10, 0, White);
+	LCD_DrawLine(320, 220, 0, 220, White);
+}

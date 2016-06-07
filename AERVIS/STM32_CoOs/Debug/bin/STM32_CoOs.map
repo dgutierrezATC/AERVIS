@@ -61,8 +61,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x38 ..\obj\led_driver.o
  .debug_ranges  0x00000000       0x28 ..\obj\led_driver.o
- .debug_line    0x00000000      0x2cf ..\obj\led_driver.o
- .debug_str     0x00000000      0x398 ..\obj\led_driver.o
+ .debug_line    0x00000000      0x283 ..\obj\led_driver.o
+ .debug_str     0x00000000      0x385 ..\obj\led_driver.o
  .comment       0x00000000       0x71 ..\obj\led_driver.o
  .debug_frame   0x00000000       0xa0 ..\obj\led_driver.o
  .ARM.attributes
@@ -108,8 +108,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x28 ..\obj\utility.o
  .debug_ranges  0x00000000       0x18 ..\obj\utility.o
- .debug_line    0x00000000       0xbf ..\obj\utility.o
- .debug_str     0x00000000      0x1b5 ..\obj\utility.o
+ .debug_line    0x00000000       0xac ..\obj\utility.o
+ .debug_str     0x00000000      0x1a2 ..\obj\utility.o
  .comment       0x00000000       0x71 ..\obj\utility.o
  .debug_frame   0x00000000       0x60 ..\obj\utility.o
  .ARM.attributes
@@ -180,8 +180,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000      0x100 ..\obj\stm32f4xx_usart.o
  .debug_ranges  0x00000000       0xf0 ..\obj\stm32f4xx_usart.o
- .debug_line    0x00000000      0x522 ..\obj\stm32f4xx_usart.o
- .debug_str     0x00000000      0x6cf ..\obj\stm32f4xx_usart.o
+ .debug_line    0x00000000      0x4d6 ..\obj\stm32f4xx_usart.o
+ .debug_str     0x00000000      0x6bc ..\obj\stm32f4xx_usart.o
  .comment       0x00000000       0x71 ..\obj\stm32f4xx_usart.o
  .debug_frame   0x00000000      0x490 ..\obj\stm32f4xx_usart.o
  .ARM.attributes
@@ -192,12 +192,18 @@ Discarded input sections
  .text          0x00000000        0x0 ..\obj\LCDUtils.o
  .data          0x00000000        0x0 ..\obj\LCDUtils.o
  .bss           0x00000000        0x0 ..\obj\LCDUtils.o
- .rodata        0x00000000       0x1e ..\obj\LCDUtils.o
+ .rodata        0x00000000       0x29 ..\obj\LCDUtils.o
  .text.LCD_printXYValues
                 0x00000000       0x68 ..\obj\LCDUtils.o
+ .text.SonogramPaint
+                0x00000000      0x104 ..\obj\LCDUtils.o
+ .text.ClearScreenSonogram
+                0x00000000       0x4c ..\obj\LCDUtils.o
  .text          0x00000000        0x0 ..\obj\LCDTask.o
  .text.CreateLCD_OSRsrc
                 0x00000000       0x24 ..\obj\LCDTask.o
+ .text.LCDSonogramTask
+                0x00000000       0xfc ..\obj\LCDTask.o
  .text          0x00000000        0x0 ..\obj\task.o
  .data          0x00000000        0x0 ..\obj\task.o
  .text.CoExitTask
@@ -227,8 +233,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x28 ..\obj\analogJoy_driver.o
  .debug_ranges  0x00000000       0x18 ..\obj\analogJoy_driver.o
- .debug_line    0x00000000      0x2d4 ..\obj\analogJoy_driver.o
- .debug_str     0x00000000      0x66f ..\obj\analogJoy_driver.o
+ .debug_line    0x00000000      0x288 ..\obj\analogJoy_driver.o
+ .debug_str     0x00000000      0x65c ..\obj\analogJoy_driver.o
  .comment       0x00000000       0x71 ..\obj\analogJoy_driver.o
  .debug_frame   0x00000000       0x5c ..\obj\analogJoy_driver.o
  .ARM.attributes
@@ -405,8 +411,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000      0x148 ..\obj\stm32f4xx_adc.o
  .debug_ranges  0x00000000      0x138 ..\obj\stm32f4xx_adc.o
- .debug_line    0x00000000      0x5d2 ..\obj\stm32f4xx_adc.o
- .debug_str     0x00000000      0x844 ..\obj\stm32f4xx_adc.o
+ .debug_line    0x00000000      0x586 ..\obj\stm32f4xx_adc.o
+ .debug_str     0x00000000      0x831 ..\obj\stm32f4xx_adc.o
  .comment       0x00000000       0x71 ..\obj\stm32f4xx_adc.o
  .debug_frame   0x00000000      0x5ec ..\obj\stm32f4xx_adc.o
  .ARM.attributes
@@ -448,8 +454,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0xa0 ..\obj\printf.o
  .debug_ranges  0x00000000       0x90 ..\obj\printf.o
- .debug_line    0x00000000      0x393 ..\obj\printf.o
- .debug_str     0x00000000      0x6bf ..\obj\printf.o
+ .debug_line    0x00000000      0x380 ..\obj\printf.o
+ .debug_str     0x00000000      0x699 ..\obj\printf.o
  .comment       0x00000000       0x71 ..\obj\printf.o
  .debug_frame   0x00000000      0x2e0 ..\obj\printf.o
  .ARM.attributes
@@ -485,8 +491,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x40 ..\obj\mm.o
  .debug_ranges  0x00000000       0x30 ..\obj\mm.o
- .debug_line    0x00000000      0x169 ..\obj\mm.o
- .debug_str     0x00000000      0x27c ..\obj\mm.o
+ .debug_line    0x00000000      0x156 ..\obj\mm.o
+ .debug_str     0x00000000      0x269 ..\obj\mm.o
  .comment       0x00000000       0x71 ..\obj\mm.o
  .debug_frame   0x00000000       0xc4 ..\obj\mm.o
  .ARM.attributes
@@ -558,8 +564,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x40 ..\obj\LedTask.o
  .debug_ranges  0x00000000       0x30 ..\obj\LedTask.o
- .debug_line    0x00000000      0x2f0 ..\obj\LedTask.o
- .debug_str     0x00000000      0x225 ..\obj\LedTask.o
+ .debug_line    0x00000000      0x2b7 ..\obj\LedTask.o
+ .debug_str     0x00000000      0x212 ..\obj\LedTask.o
  .comment       0x00000000       0x71 ..\obj\LedTask.o
  .debug_frame   0x00000000       0xac ..\obj\LedTask.o
  .ARM.attributes
@@ -668,8 +674,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000      0x108 ..\obj\stm32f4xx_flash.o
  .debug_ranges  0x00000000       0xf8 ..\obj\stm32f4xx_flash.o
- .debug_line    0x00000000      0x507 ..\obj\stm32f4xx_flash.o
- .debug_str     0x00000000      0x5d2 ..\obj\stm32f4xx_flash.o
+ .debug_line    0x00000000      0x4bb ..\obj\stm32f4xx_flash.o
+ .debug_str     0x00000000      0x5bf ..\obj\stm32f4xx_flash.o
  .comment       0x00000000       0x71 ..\obj\stm32f4xx_flash.o
  .debug_frame   0x00000000      0x44c ..\obj\stm32f4xx_flash.o
  .ARM.attributes
@@ -696,8 +702,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x60 ..\obj\syscalls.o
  .debug_ranges  0x00000000       0x50 ..\obj\syscalls.o
- .debug_line    0x00000000      0x18e ..\obj\syscalls.o
- .debug_str     0x00000000      0x330 ..\obj\syscalls.o
+ .debug_line    0x00000000      0x17b ..\obj\syscalls.o
+ .debug_str     0x00000000      0x30a ..\obj\syscalls.o
  .comment       0x00000000       0x71 ..\obj\syscalls.o
  .debug_frame   0x00000000      0x168 ..\obj\syscalls.o
  .ARM.attributes
@@ -747,8 +753,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0xb0 ..\obj\stm32f4xx_dma.o
  .debug_ranges  0x00000000       0xa0 ..\obj\stm32f4xx_dma.o
- .debug_line    0x00000000      0x45c ..\obj\stm32f4xx_dma.o
- .debug_str     0x00000000      0x582 ..\obj\stm32f4xx_dma.o
+ .debug_line    0x00000000      0x410 ..\obj\stm32f4xx_dma.o
+ .debug_str     0x00000000      0x56f ..\obj\stm32f4xx_dma.o
  .comment       0x00000000       0x71 ..\obj\stm32f4xx_dma.o
  .debug_frame   0x00000000      0x308 ..\obj\stm32f4xx_dma.o
  .ARM.attributes
@@ -812,8 +818,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x40 ..\obj\misc.o
  .debug_ranges  0x00000000       0x30 ..\obj\misc.o
- .debug_line    0x00000000      0x2c5 ..\obj\misc.o
- .debug_str     0x00000000      0x40e ..\obj\misc.o
+ .debug_line    0x00000000      0x279 ..\obj\misc.o
+ .debug_str     0x00000000      0x3fb ..\obj\misc.o
  .comment       0x00000000       0x71 ..\obj\misc.o
  .debug_frame   0x00000000       0xd8 ..\obj\misc.o
  .ARM.attributes
@@ -1803,71 +1809,71 @@ LOAD c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm
 END GROUP
 OUTPUT(STM32_CoOs.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x998a
+.debug_info     0x00000000     0x9a91
  .debug_info    0x00000000      0x2d3 ..\obj\kernelHeap.o
  .debug_info    0x000002d3      0x2c8 ..\obj\core.o
  .debug_info    0x0000059b      0x3bd ..\obj\timer.o
  .debug_info    0x00000958      0x2df ..\obj\joy_driver.o
- .debug_info    0x00000c37      0x220 ..\obj\LCDUtils.o
- .debug_info    0x00000e57      0x429 ..\obj\LCDTask.o
- .debug_info    0x00001280      0x9bf ..\obj\task.o
- .debug_info    0x00001c3f       0xed ..\obj\startup_stm32f4xx.o
- .debug_info    0x00001d2c      0x1e5 ..\obj\serviceReq.o
- .debug_info    0x00001f11       0xcd ..\obj\main.o
- .debug_info    0x00001fde      0xc4d ..\obj\stm32f4xx_rcc.o
- .debug_info    0x00002c2b       0xdd ..\obj\AsciiLib.o
- .debug_info    0x00002d08      0x40e ..\obj\mbox.o
- .debug_info    0x00003116      0xc13 ..\obj\LCD.o
- .debug_info    0x00003d29      0x8f5 ..\obj\stm32f4xx_fsmc.o
- .debug_info    0x0000461e      0x1f6 ..\obj\JoyTmr.o
- .debug_info    0x00004814      0x3d2 ..\obj\time.o
- .debug_info    0x00004be6      0x4a6 ..\obj\event.o
- .debug_info    0x0000508c      0x602 ..\obj\stm32f4xx_gpio.o
- .debug_info    0x0000568e      0x559 ..\obj\system_stm32f4xx.o
- .debug_info    0x00005be7      0x63e ..\obj\AERdriver.o
- .debug_info    0x00006225      0x528 ..\obj\queue.o
- .debug_info    0x0000674d      0x197 ..\obj\port.o
- .debug_info    0x000068e4      0x475 ..\obj\mutex.o
- .debug_info    0x00006d59      0x639 ..\obj\flag.o
- .debug_info    0x00007392      0x2fe ..\obj\arch.o
- .debug_info    0x00007690      0x3ce ..\obj\sem.o
- .debug_info    0x00007a5e      0x20f ..\obj\AERTask.o
- .debug_info    0x00007c6d       0xbc ..\obj\hook.o
- .debug_info    0x00007d29     0x1c61 ..\obj\stm32f4xx_tim.o
+ .debug_info    0x00000c37      0x29f ..\obj\LCDUtils.o
+ .debug_info    0x00000ed6      0x4b1 ..\obj\LCDTask.o
+ .debug_info    0x00001387      0x9bf ..\obj\task.o
+ .debug_info    0x00001d46       0xed ..\obj\startup_stm32f4xx.o
+ .debug_info    0x00001e33      0x1e5 ..\obj\serviceReq.o
+ .debug_info    0x00002018       0xcd ..\obj\main.o
+ .debug_info    0x000020e5      0xc4d ..\obj\stm32f4xx_rcc.o
+ .debug_info    0x00002d32       0xdd ..\obj\AsciiLib.o
+ .debug_info    0x00002e0f      0x40e ..\obj\mbox.o
+ .debug_info    0x0000321d      0xc13 ..\obj\LCD.o
+ .debug_info    0x00003e30      0x8f5 ..\obj\stm32f4xx_fsmc.o
+ .debug_info    0x00004725      0x1f6 ..\obj\JoyTmr.o
+ .debug_info    0x0000491b      0x3d2 ..\obj\time.o
+ .debug_info    0x00004ced      0x4a6 ..\obj\event.o
+ .debug_info    0x00005193      0x602 ..\obj\stm32f4xx_gpio.o
+ .debug_info    0x00005795      0x559 ..\obj\system_stm32f4xx.o
+ .debug_info    0x00005cee      0x63e ..\obj\AERdriver.o
+ .debug_info    0x0000632c      0x528 ..\obj\queue.o
+ .debug_info    0x00006854      0x197 ..\obj\port.o
+ .debug_info    0x000069eb      0x475 ..\obj\mutex.o
+ .debug_info    0x00006e60      0x639 ..\obj\flag.o
+ .debug_info    0x00007499      0x2fe ..\obj\arch.o
+ .debug_info    0x00007797      0x3ce ..\obj\sem.o
+ .debug_info    0x00007b65      0x20f ..\obj\AERTask.o
+ .debug_info    0x00007d74       0xbc ..\obj\hook.o
+ .debug_info    0x00007e30     0x1c61 ..\obj\stm32f4xx_tim.o
 
-.debug_abbrev   0x00000000     0x26b7
+.debug_abbrev   0x00000000     0x26cd
  .debug_abbrev  0x00000000      0x14f ..\obj\kernelHeap.o
  .debug_abbrev  0x0000014f       0xf5 ..\obj\core.o
  .debug_abbrev  0x00000244      0x194 ..\obj\timer.o
  .debug_abbrev  0x000003d8      0x12a ..\obj\joy_driver.o
- .debug_abbrev  0x00000502       0xcb ..\obj\LCDUtils.o
- .debug_abbrev  0x000005cd      0x170 ..\obj\LCDTask.o
- .debug_abbrev  0x0000073d      0x24c ..\obj\task.o
- .debug_abbrev  0x00000989       0xb0 ..\obj\startup_stm32f4xx.o
- .debug_abbrev  0x00000a39      0x114 ..\obj\serviceReq.o
- .debug_abbrev  0x00000b4d       0x7f ..\obj\main.o
- .debug_abbrev  0x00000bcc      0x1e3 ..\obj\stm32f4xx_rcc.o
- .debug_abbrev  0x00000daf       0x82 ..\obj\AsciiLib.o
- .debug_abbrev  0x00000e31      0x15f ..\obj\mbox.o
- .debug_abbrev  0x00000f90      0x279 ..\obj\LCD.o
- .debug_abbrev  0x00001209      0x170 ..\obj\stm32f4xx_fsmc.o
- .debug_abbrev  0x00001379       0xf6 ..\obj\JoyTmr.o
- .debug_abbrev  0x0000146f      0x194 ..\obj\time.o
- .debug_abbrev  0x00001603      0x1d4 ..\obj\event.o
- .debug_abbrev  0x000017d7      0x1a3 ..\obj\stm32f4xx_gpio.o
- .debug_abbrev  0x0000197a      0x115 ..\obj\system_stm32f4xx.o
- .debug_abbrev  0x00001a8f      0x172 ..\obj\AERdriver.o
- .debug_abbrev  0x00001c01      0x17f ..\obj\queue.o
- .debug_abbrev  0x00001d80       0xe7 ..\obj\port.o
- .debug_abbrev  0x00001e67      0x15f ..\obj\mutex.o
- .debug_abbrev  0x00001fc6      0x1b1 ..\obj\flag.o
- .debug_abbrev  0x00002177      0x111 ..\obj\arch.o
- .debug_abbrev  0x00002288      0x141 ..\obj\sem.o
- .debug_abbrev  0x000023c9       0xdd ..\obj\AERTask.o
- .debug_abbrev  0x000024a6       0x8a ..\obj\hook.o
- .debug_abbrev  0x00002530      0x187 ..\obj\stm32f4xx_tim.o
+ .debug_abbrev  0x00000502       0xe1 ..\obj\LCDUtils.o
+ .debug_abbrev  0x000005e3      0x170 ..\obj\LCDTask.o
+ .debug_abbrev  0x00000753      0x24c ..\obj\task.o
+ .debug_abbrev  0x0000099f       0xb0 ..\obj\startup_stm32f4xx.o
+ .debug_abbrev  0x00000a4f      0x114 ..\obj\serviceReq.o
+ .debug_abbrev  0x00000b63       0x7f ..\obj\main.o
+ .debug_abbrev  0x00000be2      0x1e3 ..\obj\stm32f4xx_rcc.o
+ .debug_abbrev  0x00000dc5       0x82 ..\obj\AsciiLib.o
+ .debug_abbrev  0x00000e47      0x15f ..\obj\mbox.o
+ .debug_abbrev  0x00000fa6      0x279 ..\obj\LCD.o
+ .debug_abbrev  0x0000121f      0x170 ..\obj\stm32f4xx_fsmc.o
+ .debug_abbrev  0x0000138f       0xf6 ..\obj\JoyTmr.o
+ .debug_abbrev  0x00001485      0x194 ..\obj\time.o
+ .debug_abbrev  0x00001619      0x1d4 ..\obj\event.o
+ .debug_abbrev  0x000017ed      0x1a3 ..\obj\stm32f4xx_gpio.o
+ .debug_abbrev  0x00001990      0x115 ..\obj\system_stm32f4xx.o
+ .debug_abbrev  0x00001aa5      0x172 ..\obj\AERdriver.o
+ .debug_abbrev  0x00001c17      0x17f ..\obj\queue.o
+ .debug_abbrev  0x00001d96       0xe7 ..\obj\port.o
+ .debug_abbrev  0x00001e7d      0x15f ..\obj\mutex.o
+ .debug_abbrev  0x00001fdc      0x1b1 ..\obj\flag.o
+ .debug_abbrev  0x0000218d      0x111 ..\obj\arch.o
+ .debug_abbrev  0x0000229e      0x141 ..\obj\sem.o
+ .debug_abbrev  0x000023df       0xdd ..\obj\AERTask.o
+ .debug_abbrev  0x000024bc       0x8a ..\obj\hook.o
+ .debug_abbrev  0x00002546      0x187 ..\obj\stm32f4xx_tim.o
 
-.debug_aranges  0x00000000      0xd48
+.debug_aranges  0x00000000      0xd60
  .debug_aranges
                 0x00000000       0x38 ..\obj\kernelHeap.o
  .debug_aranges
@@ -1877,183 +1883,183 @@ OUTPUT(STM32_CoOs.elf elf32-littlearm)
  .debug_aranges
                 0x000000f8       0x28 ..\obj\joy_driver.o
  .debug_aranges
-                0x00000120       0x38 ..\obj\LCDUtils.o
+                0x00000120       0x48 ..\obj\LCDUtils.o
  .debug_aranges
-                0x00000158       0x50 ..\obj\LCDTask.o
+                0x00000168       0x58 ..\obj\LCDTask.o
  .debug_aranges
-                0x000001a8       0xb0 ..\obj\task.o
+                0x000001c0       0xb0 ..\obj\task.o
  .debug_aranges
-                0x00000258       0x28 ..\obj\startup_stm32f4xx.o
+                0x00000270       0x28 ..\obj\startup_stm32f4xx.o
  .debug_aranges
-                0x00000280       0x28 ..\obj\serviceReq.o
+                0x00000298       0x28 ..\obj\serviceReq.o
  .debug_aranges
-                0x000002a8       0x30 ..\obj\main.o
+                0x000002c0       0x30 ..\obj\main.o
  .debug_aranges
-                0x000002d8      0x178 ..\obj\stm32f4xx_rcc.o
+                0x000002f0      0x178 ..\obj\stm32f4xx_rcc.o
  .debug_aranges
-                0x00000450       0x20 ..\obj\AsciiLib.o
+                0x00000468       0x20 ..\obj\AsciiLib.o
  .debug_aranges
-                0x00000470       0x48 ..\obj\mbox.o
+                0x00000488       0x48 ..\obj\mbox.o
  .debug_aranges
-                0x000004b8       0xd0 ..\obj\LCD.o
+                0x000004d0       0xd0 ..\obj\LCD.o
  .debug_aranges
-                0x00000588       0xb0 ..\obj\stm32f4xx_fsmc.o
+                0x000005a0       0xb0 ..\obj\stm32f4xx_fsmc.o
  .debug_aranges
-                0x00000638       0x40 ..\obj\JoyTmr.o
+                0x00000650       0x40 ..\obj\JoyTmr.o
  .debug_aranges
-                0x00000678       0x58 ..\obj\time.o
+                0x00000690       0x58 ..\obj\time.o
  .debug_aranges
-                0x000006d0       0x50 ..\obj\event.o
+                0x000006e8       0x50 ..\obj\event.o
  .debug_aranges
-                0x00000720       0x88 ..\obj\stm32f4xx_gpio.o
+                0x00000738       0x88 ..\obj\stm32f4xx_gpio.o
  .debug_aranges
-                0x000007a8       0x30 ..\obj\system_stm32f4xx.o
+                0x000007c0       0x30 ..\obj\system_stm32f4xx.o
  .debug_aranges
-                0x000007d8       0x68 ..\obj\AERdriver.o
+                0x000007f0       0x68 ..\obj\AERdriver.o
  .debug_aranges
-                0x00000840       0x48 ..\obj\queue.o
+                0x00000858       0x48 ..\obj\queue.o
  .debug_aranges
-                0x00000888       0x50 ..\obj\port.o
+                0x000008a0       0x50 ..\obj\port.o
  .debug_aranges
-                0x000008d8       0x38 ..\obj\mutex.o
+                0x000008f0       0x38 ..\obj\mutex.o
  .debug_aranges
-                0x00000910       0x78 ..\obj\flag.o
+                0x00000928       0x78 ..\obj\flag.o
  .debug_aranges
-                0x00000988       0x28 ..\obj\arch.o
+                0x000009a0       0x28 ..\obj\arch.o
  .debug_aranges
-                0x000009b0       0x48 ..\obj\sem.o
+                0x000009c8       0x48 ..\obj\sem.o
  .debug_aranges
-                0x000009f8       0x30 ..\obj\AERTask.o
+                0x00000a10       0x30 ..\obj\AERTask.o
  .debug_aranges
-                0x00000a28       0x28 ..\obj\hook.o
+                0x00000a40       0x28 ..\obj\hook.o
  .debug_aranges
-                0x00000a50      0x2f8 ..\obj\stm32f4xx_tim.o
+                0x00000a68      0x2f8 ..\obj\stm32f4xx_tim.o
 
-.debug_ranges   0x00000000      0xb68
+.debug_ranges   0x00000000      0xb80
  .debug_ranges  0x00000000       0x28 ..\obj\kernelHeap.o
  .debug_ranges  0x00000028       0x48 ..\obj\core.o
  .debug_ranges  0x00000070       0x58 ..\obj\timer.o
  .debug_ranges  0x000000c8       0x18 ..\obj\joy_driver.o
- .debug_ranges  0x000000e0       0x28 ..\obj\LCDUtils.o
- .debug_ranges  0x00000108       0x40 ..\obj\LCDTask.o
- .debug_ranges  0x00000148       0xa0 ..\obj\task.o
- .debug_ranges  0x000001e8       0x18 ..\obj\startup_stm32f4xx.o
- .debug_ranges  0x00000200       0x18 ..\obj\serviceReq.o
- .debug_ranges  0x00000218       0x20 ..\obj\main.o
- .debug_ranges  0x00000238      0x168 ..\obj\stm32f4xx_rcc.o
- .debug_ranges  0x000003a0       0x10 ..\obj\AsciiLib.o
- .debug_ranges  0x000003b0       0x38 ..\obj\mbox.o
- .debug_ranges  0x000003e8       0xc0 ..\obj\LCD.o
- .debug_ranges  0x000004a8       0xa0 ..\obj\stm32f4xx_fsmc.o
- .debug_ranges  0x00000548       0x30 ..\obj\JoyTmr.o
- .debug_ranges  0x00000578       0x48 ..\obj\time.o
- .debug_ranges  0x000005c0       0x40 ..\obj\event.o
- .debug_ranges  0x00000600       0x78 ..\obj\stm32f4xx_gpio.o
- .debug_ranges  0x00000678       0x20 ..\obj\system_stm32f4xx.o
- .debug_ranges  0x00000698       0x58 ..\obj\AERdriver.o
- .debug_ranges  0x000006f0       0x38 ..\obj\queue.o
- .debug_ranges  0x00000728       0x40 ..\obj\port.o
- .debug_ranges  0x00000768       0x28 ..\obj\mutex.o
- .debug_ranges  0x00000790       0x68 ..\obj\flag.o
- .debug_ranges  0x000007f8       0x18 ..\obj\arch.o
- .debug_ranges  0x00000810       0x38 ..\obj\sem.o
- .debug_ranges  0x00000848       0x20 ..\obj\AERTask.o
- .debug_ranges  0x00000868       0x18 ..\obj\hook.o
- .debug_ranges  0x00000880      0x2e8 ..\obj\stm32f4xx_tim.o
+ .debug_ranges  0x000000e0       0x38 ..\obj\LCDUtils.o
+ .debug_ranges  0x00000118       0x48 ..\obj\LCDTask.o
+ .debug_ranges  0x00000160       0xa0 ..\obj\task.o
+ .debug_ranges  0x00000200       0x18 ..\obj\startup_stm32f4xx.o
+ .debug_ranges  0x00000218       0x18 ..\obj\serviceReq.o
+ .debug_ranges  0x00000230       0x20 ..\obj\main.o
+ .debug_ranges  0x00000250      0x168 ..\obj\stm32f4xx_rcc.o
+ .debug_ranges  0x000003b8       0x10 ..\obj\AsciiLib.o
+ .debug_ranges  0x000003c8       0x38 ..\obj\mbox.o
+ .debug_ranges  0x00000400       0xc0 ..\obj\LCD.o
+ .debug_ranges  0x000004c0       0xa0 ..\obj\stm32f4xx_fsmc.o
+ .debug_ranges  0x00000560       0x30 ..\obj\JoyTmr.o
+ .debug_ranges  0x00000590       0x48 ..\obj\time.o
+ .debug_ranges  0x000005d8       0x40 ..\obj\event.o
+ .debug_ranges  0x00000618       0x78 ..\obj\stm32f4xx_gpio.o
+ .debug_ranges  0x00000690       0x20 ..\obj\system_stm32f4xx.o
+ .debug_ranges  0x000006b0       0x58 ..\obj\AERdriver.o
+ .debug_ranges  0x00000708       0x38 ..\obj\queue.o
+ .debug_ranges  0x00000740       0x40 ..\obj\port.o
+ .debug_ranges  0x00000780       0x28 ..\obj\mutex.o
+ .debug_ranges  0x000007a8       0x68 ..\obj\flag.o
+ .debug_ranges  0x00000810       0x18 ..\obj\arch.o
+ .debug_ranges  0x00000828       0x38 ..\obj\sem.o
+ .debug_ranges  0x00000860       0x20 ..\obj\AERTask.o
+ .debug_ranges  0x00000880       0x18 ..\obj\hook.o
+ .debug_ranges  0x00000898      0x2e8 ..\obj\stm32f4xx_tim.o
 
-.debug_line     0x00000000     0x504f
- .debug_line    0x00000000      0x1aa ..\obj\kernelHeap.o
- .debug_line    0x000001aa      0x141 ..\obj\core.o
- .debug_line    0x000002eb      0x20c ..\obj\timer.o
- .debug_line    0x000004f7      0x28b ..\obj\joy_driver.o
- .debug_line    0x00000782      0x231 ..\obj\LCDUtils.o
- .debug_line    0x000009b3      0x2d5 ..\obj\LCDTask.o
- .debug_line    0x00000c88      0x485 ..\obj\task.o
- .debug_line    0x0000110d       0xbd ..\obj\startup_stm32f4xx.o
- .debug_line    0x000011ca       0xe6 ..\obj\serviceReq.o
- .debug_line    0x000012b0      0x1c9 ..\obj\main.o
- .debug_line    0x00001479      0x621 ..\obj\stm32f4xx_rcc.o
- .debug_line    0x00001a9a       0x84 ..\obj\AsciiLib.o
- .debug_line    0x00001b1e      0x155 ..\obj\mbox.o
- .debug_line    0x00001c73      0x867 ..\obj\LCD.o
- .debug_line    0x000024da      0x4d4 ..\obj\stm32f4xx_fsmc.o
- .debug_line    0x000029ae      0x26c ..\obj\JoyTmr.o
- .debug_line    0x00002c1a      0x212 ..\obj\time.o
- .debug_line    0x00002e2c      0x1c9 ..\obj\event.o
- .debug_line    0x00002ff5      0x3c3 ..\obj\stm32f4xx_gpio.o
- .debug_line    0x000033b8      0x21b ..\obj\system_stm32f4xx.o
- .debug_line    0x000035d3      0x33d ..\obj\AERdriver.o
- .debug_line    0x00003910      0x19c ..\obj\queue.o
- .debug_line    0x00003aac      0x160 ..\obj\port.o
- .debug_line    0x00003c0c      0x175 ..\obj\mutex.o
- .debug_line    0x00003d81      0x282 ..\obj\flag.o
- .debug_line    0x00004003      0x12c ..\obj\arch.o
- .debug_line    0x0000412f      0x14d ..\obj\sem.o
- .debug_line    0x0000427c      0x241 ..\obj\AERTask.o
- .debug_line    0x000044bd       0xa8 ..\obj\hook.o
- .debug_line    0x00004565      0xaea ..\obj\stm32f4xx_tim.o
+.debug_line     0x00000000     0x4c17
+ .debug_line    0x00000000      0x197 ..\obj\kernelHeap.o
+ .debug_line    0x00000197      0x12e ..\obj\core.o
+ .debug_line    0x000002c5      0x1f9 ..\obj\timer.o
+ .debug_line    0x000004be      0x23f ..\obj\joy_driver.o
+ .debug_line    0x000006fd      0x261 ..\obj\LCDUtils.o
+ .debug_line    0x0000095e      0x2ce ..\obj\LCDTask.o
+ .debug_line    0x00000c2c      0x45f ..\obj\task.o
+ .debug_line    0x0000108b       0xaa ..\obj\startup_stm32f4xx.o
+ .debug_line    0x00001135       0xd3 ..\obj\serviceReq.o
+ .debug_line    0x00001208      0x1a3 ..\obj\main.o
+ .debug_line    0x000013ab      0x5d5 ..\obj\stm32f4xx_rcc.o
+ .debug_line    0x00001980       0x71 ..\obj\AsciiLib.o
+ .debug_line    0x000019f1      0x142 ..\obj\mbox.o
+ .debug_line    0x00001b33      0x81b ..\obj\LCD.o
+ .debug_line    0x0000234e      0x488 ..\obj\stm32f4xx_fsmc.o
+ .debug_line    0x000027d6      0x233 ..\obj\JoyTmr.o
+ .debug_line    0x00002a09      0x1ec ..\obj\time.o
+ .debug_line    0x00002bf5      0x1b6 ..\obj\event.o
+ .debug_line    0x00002dab      0x377 ..\obj\stm32f4xx_gpio.o
+ .debug_line    0x00003122      0x1f5 ..\obj\system_stm32f4xx.o
+ .debug_line    0x00003317      0x2f1 ..\obj\AERdriver.o
+ .debug_line    0x00003608      0x189 ..\obj\queue.o
+ .debug_line    0x00003791      0x13a ..\obj\port.o
+ .debug_line    0x000038cb      0x162 ..\obj\mutex.o
+ .debug_line    0x00003a2d      0x26f ..\obj\flag.o
+ .debug_line    0x00003c9c      0x106 ..\obj\arch.o
+ .debug_line    0x00003da2      0x13a ..\obj\sem.o
+ .debug_line    0x00003edc      0x208 ..\obj\AERTask.o
+ .debug_line    0x000040e4       0x95 ..\obj\hook.o
+ .debug_line    0x00004179      0xa9e ..\obj\stm32f4xx_tim.o
 
-.debug_str      0x00000000     0x3986
- .debug_str     0x00000000      0x259 ..\obj\kernelHeap.o
-                                0x278 (size before relaxing)
- .debug_str     0x00000259      0x1a2 ..\obj\core.o
-                                0x2c7 (size before relaxing)
- .debug_str     0x000003fb      0x16a ..\obj\timer.o
-                                0x2b5 (size before relaxing)
- .debug_str     0x00000565      0x236 ..\obj\joy_driver.o
-                                0x386 (size before relaxing)
- .debug_str     0x0000079b      0x16c ..\obj\LCDUtils.o
-                                0x2f8 (size before relaxing)
- .debug_str     0x00000907      0x1d0 ..\obj\LCDTask.o
-                                0x3e9 (size before relaxing)
- .debug_str     0x00000ad7      0x31e ..\obj\task.o
-                                0x541 (size before relaxing)
- .debug_str     0x00000df5       0xcb ..\obj\startup_stm32f4xx.o
-                                0x187 (size before relaxing)
- .debug_str     0x00000ec0       0xbb ..\obj\serviceReq.o
-                                0x1ed (size before relaxing)
- .debug_str     0x00000f7b       0x73 ..\obj\main.o
-                                0x1c0 (size before relaxing)
- .debug_str     0x00000fee      0x6c0 ..\obj\stm32f4xx_rcc.o
-                                0x890 (size before relaxing)
- .debug_str     0x000016ae       0x76 ..\obj\AsciiLib.o
-                                0x1a9 (size before relaxing)
- .debug_str     0x00001724       0xb5 ..\obj\mbox.o
-                                0x308 (size before relaxing)
- .debug_str     0x000017d9      0x4d1 ..\obj\LCD.o
-                                0x868 (size before relaxing)
- .debug_str     0x00001caa      0x413 ..\obj\stm32f4xx_fsmc.o
-                                0x7ca (size before relaxing)
- .debug_str     0x000020bd       0xa7 ..\obj\JoyTmr.o
-                                0x243 (size before relaxing)
- .debug_str     0x00002164       0xf1 ..\obj\time.o
-                                0x324 (size before relaxing)
- .debug_str     0x00002255      0x100 ..\obj\event.o
-                                0x36f (size before relaxing)
- .debug_str     0x00002355      0x1b9 ..\obj\stm32f4xx_gpio.o
-                                0x4e3 (size before relaxing)
- .debug_str     0x0000250e      0x11a ..\obj\system_stm32f4xx.o
-                                0x3cb (size before relaxing)
- .debug_str     0x00002628      0x216 ..\obj\AERdriver.o
-                                0x58b (size before relaxing)
- .debug_str     0x0000283e       0xcb ..\obj\queue.o
-                                0x36c (size before relaxing)
- .debug_str     0x00002909       0xe1 ..\obj\port.o
-                                0x207 (size before relaxing)
- .debug_str     0x000029ea       0xa9 ..\obj\mutex.o
-                                0x377 (size before relaxing)
- .debug_str     0x00002a93      0x1c2 ..\obj\flag.o
-                                0x3e5 (size before relaxing)
- .debug_str     0x00002c55       0x86 ..\obj\arch.o
-                                0x2e7 (size before relaxing)
- .debug_str     0x00002cdb       0xa5 ..\obj\sem.o
-                                0x30b (size before relaxing)
- .debug_str     0x00002d80       0xfb ..\obj\AERTask.o
+.debug_str      0x00000000     0x379e
+ .debug_str     0x00000000      0x246 ..\obj\kernelHeap.o
+                                0x265 (size before relaxing)
+ .debug_str     0x00000246      0x18f ..\obj\core.o
+                                0x2b4 (size before relaxing)
+ .debug_str     0x000003d5      0x157 ..\obj\timer.o
                                 0x2a2 (size before relaxing)
- .debug_str     0x00002e7b       0x73 ..\obj\hook.o
-                                0x19a (size before relaxing)
- .debug_str     0x00002eee      0xa98 ..\obj\stm32f4xx_tim.o
-                                0xe10 (size before relaxing)
+ .debug_str     0x0000052c      0x223 ..\obj\joy_driver.o
+                                0x373 (size before relaxing)
+ .debug_str     0x0000074f      0x190 ..\obj\LCDUtils.o
+                                0x32a (size before relaxing)
+ .debug_str     0x000008df      0x1d8 ..\obj\LCDTask.o
+                                0x3de (size before relaxing)
+ .debug_str     0x00000ab7      0x30b ..\obj\task.o
+                                0x52e (size before relaxing)
+ .debug_str     0x00000dc2       0xb8 ..\obj\startup_stm32f4xx.o
+                                0x174 (size before relaxing)
+ .debug_str     0x00000e7a       0xa8 ..\obj\serviceReq.o
+                                0x1da (size before relaxing)
+ .debug_str     0x00000f22       0x60 ..\obj\main.o
+                                0x1ad (size before relaxing)
+ .debug_str     0x00000f82      0x6ad ..\obj\stm32f4xx_rcc.o
+                                0x87d (size before relaxing)
+ .debug_str     0x0000162f       0x63 ..\obj\AsciiLib.o
+                                0x196 (size before relaxing)
+ .debug_str     0x00001692       0xa2 ..\obj\mbox.o
+                                0x2f5 (size before relaxing)
+ .debug_str     0x00001734      0x4be ..\obj\LCD.o
+                                0x842 (size before relaxing)
+ .debug_str     0x00001bf2      0x400 ..\obj\stm32f4xx_fsmc.o
+                                0x7b7 (size before relaxing)
+ .debug_str     0x00001ff2       0x94 ..\obj\JoyTmr.o
+                                0x230 (size before relaxing)
+ .debug_str     0x00002086       0xde ..\obj\time.o
+                                0x311 (size before relaxing)
+ .debug_str     0x00002164       0xed ..\obj\event.o
+                                0x35c (size before relaxing)
+ .debug_str     0x00002251      0x1a6 ..\obj\stm32f4xx_gpio.o
+                                0x4d0 (size before relaxing)
+ .debug_str     0x000023f7      0x107 ..\obj\system_stm32f4xx.o
+                                0x3b8 (size before relaxing)
+ .debug_str     0x000024fe      0x203 ..\obj\AERdriver.o
+                                0x578 (size before relaxing)
+ .debug_str     0x00002701       0xb8 ..\obj\queue.o
+                                0x359 (size before relaxing)
+ .debug_str     0x000027b9       0xce ..\obj\port.o
+                                0x1f4 (size before relaxing)
+ .debug_str     0x00002887       0x96 ..\obj\mutex.o
+                                0x364 (size before relaxing)
+ .debug_str     0x0000291d      0x1af ..\obj\flag.o
+                                0x3d2 (size before relaxing)
+ .debug_str     0x00002acc       0x73 ..\obj\arch.o
+                                0x2d4 (size before relaxing)
+ .debug_str     0x00002b3f       0x92 ..\obj\sem.o
+                                0x2f8 (size before relaxing)
+ .debug_str     0x00002bd1       0xe8 ..\obj\AERTask.o
+                                0x28f (size before relaxing)
+ .debug_str     0x00002cb9       0x60 ..\obj\hook.o
+                                0x187 (size before relaxing)
+ .debug_str     0x00002d19      0xa85 ..\obj\stm32f4xx_tim.o
+                                0xdfd (size before relaxing)
 
 .comment        0x00000000       0x70
  .comment       0x00000000       0x70 ..\obj\kernelHeap.o
@@ -2157,34 +2163,34 @@ OUTPUT(STM32_CoOs.elf elf32-littlearm)
  .ARM.attributes
                 0x000006b6       0x22 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_fixunsdfsi.o)
 
-.debug_frame    0x00000000     0x32b0
+.debug_frame    0x00000000     0x3318
  .debug_frame   0x00000000       0xa4 ..\obj\kernelHeap.o
  .debug_frame   0x000000a4       0xf8 ..\obj\core.o
  .debug_frame   0x0000019c      0x178 ..\obj\timer.o
  .debug_frame   0x00000314       0x58 ..\obj\joy_driver.o
- .debug_frame   0x0000036c       0xb0 ..\obj\LCDUtils.o
- .debug_frame   0x0000041c       0xf0 ..\obj\LCDTask.o
- .debug_frame   0x0000050c      0x2c8 ..\obj\task.o
- .debug_frame   0x000007d4       0x4c ..\obj\startup_stm32f4xx.o
- .debug_frame   0x00000820       0x58 ..\obj\serviceReq.o
- .debug_frame   0x00000878       0x64 ..\obj\main.o
- .debug_frame   0x000008dc      0x6d4 ..\obj\stm32f4xx_rcc.o
- .debug_frame   0x00000fb0       0x38 ..\obj\AsciiLib.o
- .debug_frame   0x00000fe8       0xe8 ..\obj\mbox.o
- .debug_frame   0x000010d0      0x370 ..\obj\LCD.o
- .debug_frame   0x00001440      0x300 ..\obj\stm32f4xx_fsmc.o
- .debug_frame   0x00001740       0xc4 ..\obj\JoyTmr.o
- .debug_frame   0x00001804      0x130 ..\obj\time.o
- .debug_frame   0x00001934      0x114 ..\obj\event.o
- .debug_frame   0x00001a48      0x23c ..\obj\stm32f4xx_gpio.o
- .debug_frame   0x00001c84       0x74 ..\obj\system_stm32f4xx.o
- .debug_frame   0x00001cf8      0x154 ..\obj\AERdriver.o
- .debug_frame   0x00001e4c       0xe8 ..\obj\queue.o
- .debug_frame   0x00001f34       0xd0 ..\obj\port.o
- .debug_frame   0x00002004       0xa0 ..\obj\mutex.o
- .debug_frame   0x000020a4      0x1cc ..\obj\flag.o
- .debug_frame   0x00002270       0x54 ..\obj\arch.o
- .debug_frame   0x000022c4       0xe8 ..\obj\sem.o
- .debug_frame   0x000023ac       0x68 ..\obj\AERTask.o
- .debug_frame   0x00002414       0x48 ..\obj\hook.o
- .debug_frame   0x0000245c      0xe54 ..\obj\stm32f4xx_tim.o
+ .debug_frame   0x0000036c       0xf8 ..\obj\LCDUtils.o
+ .debug_frame   0x00000464      0x110 ..\obj\LCDTask.o
+ .debug_frame   0x00000574      0x2c8 ..\obj\task.o
+ .debug_frame   0x0000083c       0x4c ..\obj\startup_stm32f4xx.o
+ .debug_frame   0x00000888       0x58 ..\obj\serviceReq.o
+ .debug_frame   0x000008e0       0x64 ..\obj\main.o
+ .debug_frame   0x00000944      0x6d4 ..\obj\stm32f4xx_rcc.o
+ .debug_frame   0x00001018       0x38 ..\obj\AsciiLib.o
+ .debug_frame   0x00001050       0xe8 ..\obj\mbox.o
+ .debug_frame   0x00001138      0x370 ..\obj\LCD.o
+ .debug_frame   0x000014a8      0x300 ..\obj\stm32f4xx_fsmc.o
+ .debug_frame   0x000017a8       0xc4 ..\obj\JoyTmr.o
+ .debug_frame   0x0000186c      0x130 ..\obj\time.o
+ .debug_frame   0x0000199c      0x114 ..\obj\event.o
+ .debug_frame   0x00001ab0      0x23c ..\obj\stm32f4xx_gpio.o
+ .debug_frame   0x00001cec       0x74 ..\obj\system_stm32f4xx.o
+ .debug_frame   0x00001d60      0x154 ..\obj\AERdriver.o
+ .debug_frame   0x00001eb4       0xe8 ..\obj\queue.o
+ .debug_frame   0x00001f9c       0xd0 ..\obj\port.o
+ .debug_frame   0x0000206c       0xa0 ..\obj\mutex.o
+ .debug_frame   0x0000210c      0x1cc ..\obj\flag.o
+ .debug_frame   0x000022d8       0x54 ..\obj\arch.o
+ .debug_frame   0x0000232c       0xe8 ..\obj\sem.o
+ .debug_frame   0x00002414       0x68 ..\obj\AERTask.o
+ .debug_frame   0x0000247c       0x48 ..\obj\hook.o
+ .debug_frame   0x000024c4      0xe54 ..\obj\stm32f4xx_tim.o
