@@ -198,7 +198,7 @@ void LCDHistogramTask(void * parg) {
 
 		//
 		time_init_ref = tim;
-		time_end_ref = time_init_ref + HISTOGRAM_FRAME(200); //menor tiempo
+		time_end_ref = time_init_ref + HISTOGRAM_FRAME(1000); //menor tiempo
 
 		// cada tick equivale a 50ms
 		//CoTimeDelay(0, 0, 0, 1);
@@ -239,7 +239,7 @@ void LCDSonogramTask(void * parg) {
 
 		//Comprobamos si el paquete está dentro de la ventana temporal
 		if (((uint32_t) tim) >= time_init_ref
-				&& ((uint32_t) tim) <= time_end_ref) {
+				&& ((uint32_t) tim) <= time_end_ref) {//periodo de muestreo menor cada columna representa un periodo de integracion
 
 			//Decodificamos el dato
 			decodeAERData(dat, &aerDecodedData.left_rigth,
@@ -263,7 +263,7 @@ void LCDSonogramTask(void * parg) {
 
 		//
 		time_init_ref = tim;
-		time_end_ref = time_init_ref + HISTOGRAM_FRAME(10000);
+		time_end_ref = time_init_ref + HISTOGRAM_FRAME(1000);
 
 		// cada tick equivale a 50ms
 		//CoTimeDelay(0, 0, 0, 1);
