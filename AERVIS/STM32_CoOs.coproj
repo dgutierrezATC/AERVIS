@@ -90,8 +90,8 @@
     <File name="AER" path="" type="2"/>
     <File name="CoOs/kernel/flag.c" path="CoOS/kernel/flag.c" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_usart.h" path="cmsis_lib/include/stm32f4xx_usart.h" type="1"/>
-    <File name="cmsis_boot/stm32f4xx.h" path="cmsis_boot/stm32f4xx.h" type="1"/>
     <File name="cmsis/core_cm4_simd.h" path="cmsis/core_cm4_simd.h" type="1"/>
+    <File name="cmsis_boot/stm32f4xx.h" path="cmsis_boot/stm32f4xx.h" type="1"/>
     <File name="Tasks" path="" type="2"/>
     <File name="cmsis/core_cmFunc.h" path="cmsis/core_cmFunc.h" type="1"/>
     <File name="BSP/analogJoy_driver.h" path="BSP/analogJoy_driver.h" type="1"/>
@@ -109,9 +109,9 @@
     <File name="Tasks/LCDTask.h" path="Tasks/LCDTask.h" type="1"/>
     <File name="LCD/LCD.h" path="LCD/LCD.h" type="1"/>
     <File name="Tasks/LedTask.c" path="Tasks/LedTask.c" type="1"/>
-    <File name="cmsis_boot/startup/startup_stm32f4xx.c" path="cmsis_boot/startup/startup_stm32f4xx.c" type="1"/>
     <File name="CoOs/kernel/kernelHeap.c" path="CoOS/kernel/kernelHeap.c" type="1"/>
     <File name="stdio" path="" type="2"/>
+    <File name="cmsis_boot/startup/startup_stm32f4xx.c" path="cmsis_boot/startup/startup_stm32f4xx.c" type="1"/>
     <File name="cmsis_lib/source/stm32f4xx_rcc.c" path="cmsis_lib/source/stm32f4xx_rcc.c" type="1"/>
     <File name="cmsis/core_cmInstr.h" path="cmsis/core_cmInstr.h" type="1"/>
     <File name="CoOs/kernel/utility.h" path="CoOS/kernel/utility.h" type="1"/>
@@ -152,15 +152,15 @@
     <File name="CoOs/portable/arch.c" path="CoOS/portable/arch.c" type="1"/>
     <File name="CoOs/kernel/OsTimer.h" path="CoOS/kernel/OsTimer.h" type="1"/>
     <File name="cmsis_lib/source/misc.c" path="cmsis_lib/source/misc.c" type="1"/>
-    <File name="cmsis_lib/include/stm32f4xx_tim.h" path="cmsis_lib/include/stm32f4xx_tim.h" type="1"/>
     <File name="cmsis_lib/source/stm32f4xx_adc.c" path="cmsis_lib/source/stm32f4xx_adc.c" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_tim.h" path="cmsis_lib/include/stm32f4xx_tim.h" type="1"/>
     <File name="CoOs/kernel/CoOS.h" path="CoOS/kernel/CoOS.h" type="1"/>
     <File name="CoOs/kernel/OsKernelHeap.h" path="CoOS/kernel/OsKernelHeap.h" type="1"/>
     <File name="cmsis_lib/source" path="" type="2"/>
     <File name="CoOs/kernel/OsCore.h" path="CoOS/kernel/OsCore.h" type="1"/>
     <File name="Tasks/JoyTmr.c" path="Tasks/JoyTmr.c" type="1"/>
-    <File name="CoOs/kernel/OsMM.h" path="CoOS/kernel/OsMM.h" type="1"/>
     <File name="CoOs/kernel/OsConfig.h" path="CoOS/kernel/OsConfig.h" type="1"/>
+    <File name="CoOs/kernel/OsMM.h" path="CoOS/kernel/OsMM.h" type="1"/>
     <File name="cmsis_boot/stm32f4xx_conf.h" path="cmsis_boot/stm32f4xx_conf.h" type="1"/>
     <File name="cmsis_boot/system_stm32f4xx.h" path="cmsis_boot/system_stm32f4xx.h" type="1"/>
     <File name="CoOs/kernel/OsTime.h" path="CoOS/kernel/OsTime.h" type="1"/>
@@ -173,15 +173,15 @@
     <File name="All.h" path="All.h" type="1"/>
     <File name="LCD/LCD.c" path="LCD/LCD.c" type="1"/>
     <File name="LCD/AsciiLib.c" path="LCD/AsciiLib.c" type="1"/>
-    <File name="CoOs/kernel/queue.c" path="CoOS/kernel/queue.c" type="1"/>
     <File name="CoOs/kernel/mutex.c" path="CoOS/kernel/mutex.c" type="1"/>
+    <File name="CoOs/kernel/queue.c" path="CoOS/kernel/queue.c" type="1"/>
     <File name="Tasks/AERTask.c" path="Tasks/AERTask.c" type="1"/>
     <File name="CoOs/kernel/mbox.c" path="CoOS/kernel/mbox.c" type="1"/>
     <File name="BSP/analogJoy_driver.c" path="BSP/analogJoy_driver.c" type="1"/>
     <File name="CoOs/kernel/coocox.h" path="CoOS/kernel/coocox.h" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_dma.h" path="cmsis_lib/include/stm32f4xx_dma.h" type="1"/>
-    <File name="cmsis_lib/source/stm32f4xx_tim.c" path="cmsis_lib/source/stm32f4xx_tim.c" type="1"/>
     <File name="CoOs/kernel/hook.c" path="CoOS/kernel/hook.c" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_tim.c" path="cmsis_lib/source/stm32f4xx_tim.c" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_gpio.h" path="cmsis_lib/include/stm32f4xx_gpio.h" type="1"/>
     <File name="syscalls" path="" type="2"/>
     <File name="cmsis_lib/include/stm32f4xx_fsmc.h" path="cmsis_lib/include/stm32f4xx_fsmc.h" type="1"/>

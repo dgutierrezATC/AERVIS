@@ -1,7 +1,6 @@
 #include "All.h"
 
 //Parametros del Histograma
-#define HISTOGRAM_FRAME(x) x*1000 //en ms
 #define NUM_CHANNELS 64
 
 uint8_t isFirstTime = 1;
@@ -35,7 +34,8 @@ typedef struct {
 
 //Variables de tiempo (en microsegundos)
 uint32_t time_init_ref = 0;
-uint32_t time_end_ref = 0;
+uint32_t time_end_ref = 1048560*50;
+uint32_t time_absolut = 0;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -85,13 +85,15 @@ void LCDManagerTask(void* pdata) {
 			waitForKey(5, 0);
 			CoDelTask(lcdId);
 			isFirstTime = 0;
-			CoCreateTask(LCD_RxTask, 0, 2,
-					&LCDRX_stk[1][STACK_SIZE_LCD_RXTASK-1],
-					STACK_SIZE_LCD_RXTASK);
 		}
 
-		lcdId =
+		/*lcdId =
 				CoCreateTask (LCDHistogramTask,0,1,&LCD_stk[1][STACK_SIZE_LCD-1],STACK_SIZE_LCD);
+		waitForKey(5, 0);
+		CoDelTask(lcdId);*/
+
+		lcdId =
+				CoCreateTask (LCDSonogramTask,0,1,&LCD_stk[1][STACK_SIZE_LCD-1],STACK_SIZE_LCD);
 		waitForKey(5, 0);
 		CoDelTask(lcdId);
 
@@ -126,32 +128,13 @@ void LCDHelloTask(void * parg) {
 	}
 }
 
-void LCD_RxTask(void * parg) {
-
-	void *msg_in;
-	StatusType res_State;
-
-	time_init_ref = 0;
-	time_end_ref = time_init_ref + HISTOGRAM_FRAME(10000);
-
-	while (1) {
-
-		//Primero leemos un dato de la cola
-		msg_in = CoPendQueueMail(queueAERData, 0, &res_State);
-
-		//Metemos estos datos en otra cola que proporcione a las tareas de pintar los datos
-		//y que iran cogiendo cuando los necesiten
-		CoPostQueueMail(queueLCDData, msg_in);
-		CoTimeDelay(0, 0, 0, 1);
-		//CoTickDelay(10);
-	}
-}
-
 void LCDHistogramTask(void * parg) {
 
 	/////Datos leidos de la cola///////
 	uint16_t dat = 0;
 	uint16_t tim = 0;
+	uint16_t tim_old = 0;
+	uint16_t tim_offset = 0;
 	StatusType result;
 	void *msg;
 	///////////////////////////////////
@@ -163,7 +146,7 @@ void LCDHistogramTask(void * parg) {
 	uint32_t numEvents_channel[NUM_CHANNELS];
 
 	LCD_Clear(White);
-	LCD_PrintText(10, 224, "Histogram", Blue, White);
+	//LCD_PrintText(10, 224, "Histogram", Blue, White);
 	/* Preparacion de las mallas del eje X e Y */
 	LCD_drawXYMesh();
 	//Ponemos a 0 todas las posiciones del array para poder hacer el incremento
@@ -173,33 +156,35 @@ void LCDHistogramTask(void * parg) {
 	for (;;) {
 
 		//Primero cogemos los datos de la cola
-		msg = CoPendQueueMail(queueLCDData, 0, &result);
+		msg = CoPendQueueMail(queueAERData, 0, &result);
 		dat = ((uint16_t*) msg)[0];
 		tim = ((uint16_t*) msg)[1];
 
+		if(tim >= tim_old){
+			tim_offset = 0;
+		}else{
+			tim_offset = 65535-tim_old;
+		}
+		time_absolut = time_absolut + tim + tim_offset;
+
 		//Comprobamos si el paquete está dentro de la ventana temporal
-		//if(((uint32_t)tim) >= time_init_ref && ((uint32_t)tim) <= time_end_ref){
+		if(/*time_absolut >= time_init_ref &&*/ time_absolut <= time_end_ref){
+			//Decodificamos el dato
+			decodeAERData(dat, &aerDecodedData.left_rigth, &aerDecodedData.channel,&aerDecodedData.polarity);
+			numEvents_channel[aerDecodedData.channel] = numEvents_channel[aerDecodedData.channel] + 1;
+		}else{
+			/* Preparacion de las mallas del eje X e Y */
+			LCD_Clear(White);
+			LCD_drawXYMesh();
 
-		//Decodificamos el dato
-		decodeAERData(dat, &aerDecodedData.left_rigth, &aerDecodedData.channel,
-				&aerDecodedData.polarity);
-
-		numEvents_channel[aerDecodedData.channel] =
-				numEvents_channel[aerDecodedData.channel] + 1;
-
-		//}else{
-		//Cuando este fuera del rango temporal de la ventana significa que tenemos que pintar
-		//Dibujamos las columnas con la altura en funcion del numero de eventos
-		//Fijamos el maximo aprox 8500-9000)
-		LCD_drawHistogramColumns(numEvents_channel, NUM_CHANNELS);
-		//AER_clearNumEventsChannelBuffer(numEvents_channel, NUM_CHANNELS);
-
-		//}
-
-		//
-		time_init_ref = tim;
-		time_end_ref = time_init_ref + HISTOGRAM_FRAME(1000); //menor tiempo
-
+			//Cuando este fuera del rango temporal de la ventana significa que tenemos que pintar
+			//Dibujamos las columnas con la altura en funcion del numero de eventos
+			//Fijamos el maximo aprox 8500-9000)
+			LCD_drawHistogramColumns(numEvents_channel, NUM_CHANNELS, Green);
+			AER_clearNumEventsChannelBuffer(numEvents_channel, NUM_CHANNELS);
+			time_absolut = 0;
+		}
+		tim_old = tim;
 		// cada tick equivale a 50ms
 		//CoTimeDelay(0, 0, 0, 1);
 		//CoTickDelay(10);
@@ -211,6 +196,13 @@ void LCDSonogramTask(void * parg) {
 	/////Datos leidos de la cola///////
 	uint16_t dat = 0;
 	uint16_t tim = 0;
+	uint16_t tim_old = 0;
+	uint16_t tim_offset = 0;
+
+	uint16_t interval = (time_end_ref / 318);
+	uint16_t t_init_interval = 0;
+	uint16_t t_end_interval = interval;
+
 	int paint_cont=0;
 	StatusType result;
 	void *msg;
@@ -222,7 +214,6 @@ void LCDSonogramTask(void * parg) {
 	//Array para almacenar el numero de eventos por canal
 	uint32_t numEvents_channel[NUM_CHANNELS];
 
-	LCD_Clear(White);
 	ClearScreenSonogram();
 	/* Preparacion de las mallas del eje X e Y */
 
@@ -233,43 +224,39 @@ void LCDSonogramTask(void * parg) {
 	for (;;) {
 
 		//Primero cogemos los datos de la cola
-		msg = CoPendQueueMail(queueLCDData, 0, &result);
+		msg = CoPendQueueMail(queueAERData, 0, &result);
 		dat = ((uint16_t*) msg)[0];
 		tim = ((uint16_t*) msg)[1];
+		if(tim >= tim_old){
+			tim_offset = 0;
+		}else{
+			tim_offset = 65535-tim_old;
+		}
+		time_absolut = time_absolut + tim + tim_offset;
 
 		//Comprobamos si el paquete está dentro de la ventana temporal
-		if (((uint32_t) tim) >= time_init_ref
-				&& ((uint32_t) tim) <= time_end_ref) {//periodo de muestreo menor cada columna representa un periodo de integracion
-
-			//Decodificamos el dato
-			decodeAERData(dat, &aerDecodedData.left_rigth,
-					&aerDecodedData.channel, &aerDecodedData.polarity);
-
-			numEvents_channel[aerDecodedData.channel] =
-					numEvents_channel[aerDecodedData.channel] + 1;
-
+		if (time_absolut <= time_end_ref) {//periodo de muestreo menor cada columna representa un periodo de integracion
+			if(time_absolut>= t_init_interval && time_absolut <= t_end_interval){
+				decodeAERData(dat, &aerDecodedData.left_rigth, &aerDecodedData.channel, &aerDecodedData.polarity);
+							numEvents_channel[aerDecodedData.channel] = numEvents_channel[aerDecodedData.channel] + 1;
+			}else{
+				SonogramPaint(numEvents_channel,&paint_cont);
+				AER_clearNumEventsChannelBuffer(numEvents_channel, NUM_CHANNELS);
+				paint_cont++;
+				t_init_interval = t_end_interval;
+				t_init_interval = (paint_cont+1)*interval;
+				if(paint_cont == 318){
+					paint_cont = 0;
+				}
+			}
 		} else {
-			//Cuando este fuera del rango temporal de la ventana significa que tenemos que pintar
-			//Dibujamos las columnas con la altura en funcion del numero de eventos
-			//Fijamos el maximo aprox 8500-9000)
-			//LCD_drawHistogramColumns(numEvents_channel, NUM_CHANNELS);
-			SonogramPaint(numEvents_channel,&paint_cont);
-			//AER_clearNumEventsChannelBuffer(numEvents_channel, NUM_CHANNELS);
-			paint_cont++;
-			if(paint_cont = 220)
-				paint_cont = 0;
+			AER_clearNumEventsChannelBuffer(numEvents_channel, NUM_CHANNELS);
+			ClearScreenSonogram();
+			paint_cont = 0;
+			time_absolut = 0;
 		}
-
-
-		//
-		time_init_ref = tim;
-		time_end_ref = time_init_ref + HISTOGRAM_FRAME(1000);
-
-		// cada tick equivale a 50ms
-		//CoTimeDelay(0, 0, 0, 1);
-		//CoTickDelay(10);
+		tim_old = tim;
 	}
-
 }
 
 

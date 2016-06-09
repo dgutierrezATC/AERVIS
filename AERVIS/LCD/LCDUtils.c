@@ -9,10 +9,11 @@ void LCD_drawXYMesh(void) {
 	uint16_t i = 0;
 
 	LCD_DrawRectangle(0, 0, 320, 205, 3, Black);
-	for (i = 0; i < 10; i++) {
+	//LCD_FillRectangle(0+3,0+3,320-3, 205-3, White);
+	/*for (i = 0; i < 10; i++) {
 		LCD_DrawLine(i * 32, 0, i * 32, 205, Black);
 		LCD_DrawLine(0, i * 20.5, 320, i * 20.5, Black);
-	}
+	}*/
 }
 
 void LCD_printXYValues(uint16_t x_value, uint16_t y_value) {
@@ -29,7 +30,7 @@ void LCD_printXYValues(uint16_t x_value, uint16_t y_value) {
 	LCD_PrintText(150, 225, valorY, White, Black);
 }
 
-void LCD_drawHistogramColumns(uint32_t *num_events_channel, uint8_t num_channels) {
+void LCD_drawHistogramColumns(uint32_t *num_events_channel, uint8_t num_channels, uint16_t col_color) {
 	uint8_t col_index = 0;
 	uint32_t col_alt = 0;
 	uint32_t col_width = 0;
@@ -42,8 +43,8 @@ void LCD_drawHistogramColumns(uint32_t *num_events_channel, uint8_t num_channels
 		col_alt = (205*num_events_channel[col_index]/100);
 		x = 3 + (2 + col_width)*col_index;
 		y = 205 - col_alt - 4;
-		LCD_DrawRectangle(x , y, col_width,col_alt,2,Green);
-		LCD_FillRectangle(x +2, y+2, col_width-3,col_alt-3,Red);
+		LCD_DrawRectangle(x , y, col_width,col_alt,2,col_color);
+		//LCD_FillRectangle(x +2, y+2, col_width-3,col_alt-3,Red);
 	}
 }
 
@@ -85,8 +86,7 @@ void SonogramPaint(uint32_t *num_events_channel, int *paint_index) {
 }
 void ClearScreenSonogram() {
 
-	LCD_Clear(Blue);
-	LCD_PrintText(10, 224, "Sonogram", White, Blue);
-	LCD_DrawLine(10, 220, 10, 0, White);
-	LCD_DrawLine(320, 220, 0, 220, White);
+	LCD_Clear(White);
+	LCD_DrawLine(10, 220, 10, 0, Blue);
+	LCD_DrawLine(320, 220, 0, 220, Blue);
 }

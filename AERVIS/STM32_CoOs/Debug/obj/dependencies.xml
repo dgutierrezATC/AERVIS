@@ -1,85 +1,85 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dependencies>
-   <includePath signature="/I..\..\..\..\..\Users\Ricardo\Documents\GitHub /I..\..\..\..\..\Users\Ricardo\Documents\GitHub\AERVIS\AERVIS\cmsis_boot /I..\..\..\..\..\Users\Ricardo\Documents\GitHub\AERVIS /I..\..\..\..\..\Users\Ricardo\Documents\GitHub\AERVIS\AERVIS\CoOS /I..\..\..\..\..\Users\Ricardo\Documents\GitHub\AERVIS\AERVIS\Tasks /I..\..\..\..\..\Users\Ricardo\Documents\GitHub\AERVIS\AERVIS\cmsis_lib /I..\..\..\..\..\Users\Ricardo\Documents\GitHub\AERVIS\AERVIS\cmsis /I..\..\..\..\..\Users\Ricardo\Documents\GitHub\AERVIS\AERVIS\CoOS\kernel /I..\..\..\..\..\Users\Ricardo\Documents\GitHub\AERVIS\AERVIS /I..\..\..\..\..\Users\Ricardo\Documents\GitHub\AERVIS\AERVIS\cmsis_lib\include /I..\..\..\..\..\Users\Ricardo\Documents\GitHub\AERVIS\AERVIS\AER /I..\..\..\..\..\Users\Ricardo\Documents\GitHub\AERVIS\AERVIS\LCD /I..\..\..\..\..\Users\Ricardo\Documents\GitHub\AERVIS\AERVIS\BSP /I..\..\..\..\..\Users\Ricardo\Documents\GitHub\AERVIS\AERVIS\CoOS\portable">
-      <source file="..\..\..\BSP\analogJoy_driver.c" lastModified="15529e860e9">
+   <includePath signature="/I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\cmsis_lib\include /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\CoOS\portable /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\cmsis_boot /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\cmsis_lib /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\LCD /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\Tasks /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\BSP /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\AER /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\CoOS /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\CoOS\kernel /I..\..\..\..\..\Proyectos\Universidad\Proyecto_SSOOSE\Repositorio\AERVIS\AERVIS\cmsis">
+      <source file="..\..\..\BSP\analogJoy_driver.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\CoOS.h"/>
          <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\OsServiceReq.h" lastModified="15529e8614d">
+      <source file="..\..\..\CoOS\kernel\OsServiceReq.h" lastModified="140bb9f0680">
       </source>
-      <source file="..\..\..\CoOS\kernel\kernelHeap.c" lastModified="15529e8619d">
+      <source file="..\..\..\CoOS\kernel\kernelHeap.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\core.c" lastModified="15529e8618a">
+      <source file="..\..\..\CoOS\kernel\core.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
-      <source file="..\..\..\cmsis\core_cm4.h" lastModified="15529e867d8">
+      <source file="..\..\..\cmsis\core_cm4.h" lastModified="140bb9f0a68">
          <include file="..\..\..\cmsis\core_cmInstr.h"/>
          <include file="..\..\..\cmsis\core_cmFunc.h"/>
          <include file="..\..\..\cmsis\core_cm4_simd.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\OsCore.h" lastModified="15529e8611a">
+      <source file="..\..\..\CoOS\kernel\OsCore.h" lastModified="140bb9efeb0">
          <include file="..\..\..\CoOS\kernel\CoOS.h"/>
       </source>
-      <source file="..\..\..\LCD\LCD.h" lastModified="15529e861ee">
+      <source file="..\..\..\LCD\LCD.h" lastModified="140bb9efeb0">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
          <include file="..\..\..\LCD\AsciiLib.h"/>
       </source>
-      <source file="..\..\..\cmsis_lib\include\misc.h" lastModified="15529e86432">
+      <source file="..\..\..\cmsis_lib\include\misc.h" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\OsEvent.h" lastModified="15529e86123">
+      <source file="..\..\..\CoOS\kernel\OsEvent.h" lastModified="140bb9f0680">
       </source>
-      <source file="..\..\..\cmsis_lib\source\stm32f4xx_tim.c" lastModified="15529e864ac">
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_tim.c" lastModified="15480fcb0fe">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\OsError.h" lastModified="15529e8611c">
+      <source file="..\..\..\CoOS\kernel\OsError.h" lastModified="140bb9efeb0">
       </source>
-      <source file="..\..\..\LCD\LCD.c" lastModified="15529e861e8">
+      <source file="..\..\..\LCD\LCD.c" lastModified="140bb9efeb0">
          <include file="..\..\..\LCD\LCD.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\task.c" lastModified="15529e861bd">
+      <source file="..\..\..\CoOS\kernel\task.c" lastModified="140bb9efeb0">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
-      <source file="..\..\..\cmsis_lib\source\misc.c" lastModified="15529e86483">
+      <source file="..\..\..\cmsis_lib\source\misc.c" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_lib\include\misc.h"/>
       </source>
-      <source file="..\..\..\AER\AERdriver.h" lastModified="15529e860e4">
+      <source file="..\..\..\AER\AERdriver.h" lastModified="15526391517">
          <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\OsTask.h" lastModified="15529e86179">
+      <source file="..\..\..\CoOS\kernel\OsTask.h" lastModified="140bb9f0680">
       </source>
-      <source file="..\..\..\Tasks\JoyTmr.h" lastModified="15529e863d6">
+      <source file="..\..\..\Tasks\JoyTmr.h" lastModified="140bb9f0680">
       </source>
-      <source file="..\..\..\AER\AERdriver.c" lastModified="1552b7a4e4f">
+      <source file="..\..\..\AER\AERdriver.c" lastModified="1552b3a83f0">
          <include file="..\..\..\AER\AERdriver.h"/>
       </source>
-      <source file="..\..\..\cmsis_boot\stm32f4xx.h" lastModified="15529e86802">
+      <source file="..\..\..\cmsis_boot\stm32f4xx.h" lastModified="140bb9f0298">
          <include file="..\..\..\cmsis\core_cm4.h"/>
          <include file="..\..\..\cmsis_boot\system_stm32f4xx.h"/>
          <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\mm.c" lastModified="15529e861a6">
+      <source file="..\..\..\CoOS\kernel\mm.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\serviceReq.c" lastModified="15529e861b8">
+      <source file="..\..\..\CoOS\kernel\serviceReq.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\event.c" lastModified="15529e8618d">
+      <source file="..\..\..\CoOS\kernel\event.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
-      <source file="..\..\..\Tasks\JoyTmr.c" lastModified="15529e863d1">
+      <source file="..\..\..\Tasks\JoyTmr.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\CoOS.h"/>
          <include file="..\..\..\BSP\BSP.h"/>
       </source>
-      <source file="..\..\..\cmsis_lib\source\stm32f4xx_usart.c" lastModified="15529e864b0">
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_usart.c" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_usart.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
       </source>
-      <source file="..\..\..\Tasks\LCDTask.h" lastModified="15529e863e2">
+      <source file="..\..\..\Tasks\LCDTask.h" lastModified="15526ad5229">
       </source>
-      <source file="..\..\..\All.h" lastModified="1552b7a5239">
+      <source file="..\..\..\All.h" lastModified="1552a507430">
          <include file="..\..\..\CoOS\kernel\CoOS.h"/>
          <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
          <include file="..\..\..\LCD\LCD.h"/>
@@ -87,70 +87,70 @@
          <include file="..\..\..\BSP\BSP.h"/>
          <include file="..\..\..\LCD\LCDUtils.h"/>
       </source>
-      <source file="..\..\..\Tasks\LCDTask.c" lastModified="1552b971fe0">
+      <source file="..\..\..\Tasks\LCDTask.c" lastModified="15535c1c910">
          <include file="..\..\..\All.h"/>
       </source>
-      <source file="..\..\..\cmsis_lib\include\stm32f4xx_dma.h" lastModified="15529e8643c">
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_dma.h" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
-      <source file="..\..\..\CoOS\portable\GCC\port.c" lastModified="15529e861d2">
+      <source file="..\..\..\CoOS\portable\GCC\port.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
-      <source file="..\..\..\cmsis_lib\source\stm32f4xx_flash.c" lastModified="15529e86495">
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_flash.c" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_flash.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\mbox.c" lastModified="15529e861a0">
+      <source file="..\..\..\CoOS\kernel\mbox.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
-      <source file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h" lastModified="15529e8645c">
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\OsMutex.h" lastModified="15529e86148">
+      <source file="..\..\..\CoOS\kernel\OsMutex.h" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
-      <source file="..\..\..\cmsis_boot\system_stm32f4xx.h" lastModified="15529e8642b">
+      <source file="..\..\..\cmsis_boot\system_stm32f4xx.h" lastModified="140bb9efeb0">
       </source>
-      <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="15529e867ea">
+      <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="140bb9f0a68">
       </source>
-      <source file="..\..\..\cmsis_boot\system_stm32f4xx.c" lastModified="15529e86428">
+      <source file="..\..\..\cmsis_boot\system_stm32f4xx.c" lastModified="140bb9efeb0">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
-      <source file="..\..\..\cmsis_lib\source\stm32f4xx_fsmc.c" lastModified="15529e8649a">
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_fsmc.c" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_fsmc.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
       </source>
-      <source file="..\..\..\syscalls\syscalls.c" lastModified="15529e87463">
+      <source file="..\..\..\syscalls\syscalls.c" lastModified="140bb9f1620">
       </source>
-      <source file="..\..\..\BSP\joy_driver.h" lastModified="15529e86102">
+      <source file="..\..\..\BSP\joy_driver.h" lastModified="140bb9f0680">
       </source>
-      <source file="..\..\..\CoOS\kernel\OsConfig.h" lastModified="15529e86116">
+      <source file="..\..\..\CoOS\kernel\OsConfig.h" lastModified="140bb9f0680">
       </source>
-      <source file="..\..\..\stdio\printf.c" lastModified="15529e86c8f">
+      <source file="..\..\..\stdio\printf.c" lastModified="140bb9f0680">
       </source>
-      <source file="..\..\..\CoOS\kernel\mutex.c" lastModified="15529e861aa">
+      <source file="..\..\..\CoOS\kernel\mutex.c" lastModified="140bb9efeb0">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\hook.c" lastModified="15529e86198">
+      <source file="..\..\..\CoOS\kernel\hook.c" lastModified="140bb9efeb0">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
-      <source file="..\..\..\Tasks\LedTask.h" lastModified="15529e863e7">
+      <source file="..\..\..\Tasks\LedTask.h" lastModified="140bb9f0680">
       </source>
-      <source file="..\..\..\CoOS\kernel\flag.c" lastModified="15529e86190">
+      <source file="..\..\..\CoOS\kernel\flag.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
-      <source file="..\..\..\BSP\joy_driver.c" lastModified="15529e86100">
+      <source file="..\..\..\BSP\joy_driver.c" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
          <include file="..\..\..\BSP\joy_driver.h"/>
       </source>
-      <source file="..\..\..\cmsis\core_cmFunc.h" lastModified="15529e867e5">
+      <source file="..\..\..\cmsis\core_cmFunc.h" lastModified="140bb9f0a68">
       </source>
-      <source file="..\..\..\Tasks\LedTask.c" lastModified="15529e863e5">
+      <source file="..\..\..\Tasks\LedTask.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\CoOS.h"/>
          <include file="..\..\..\BSP\BSP.h"/>
          <include file="..\..\..\Tasks\LedTask.h"/>
          <include file="..\..\..\Tasks\JoyTmr.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\coocox.h" lastModified="15529e86186">
+      <source file="..\..\..\CoOS\kernel\coocox.h" lastModified="140bb9efeb0">
          <include file="..\..\..\CoOS\kernel\CoOS.h"/>
          <include file="..\..\..\CoOS\portable\OsArch.h"/>
          <include file="..\..\..\CoOS\kernel\OsCore.h"/>
@@ -166,17 +166,17 @@
          <include file="..\..\..\CoOS\kernel\OsQueue.h"/>
          <include file="..\..\..\CoOS\kernel\OsFlag.h"/>
       </source>
-      <source file="..\..\..\cmsis_lib\include\stm32f4xx_fsmc.h" lastModified="15529e86454">
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_fsmc.h" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\OsQueue.h" lastModified="15529e8614b">
+      <source file="..\..\..\CoOS\kernel\OsQueue.h" lastModified="140bb9f0680">
       </source>
-      <source file="..\..\..\cmsis_lib\include\stm32f4xx_usart.h" lastModified="15529e86469">
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_usart.h" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
-      <source file="..\..\..\CoOS\portable\OsArch.h" lastModified="15529e861d8">
+      <source file="..\..\..\CoOS\portable\OsArch.h" lastModified="140bb9f0680">
       </source>
-      <source file="..\..\..\cmsis_boot\stm32f4xx_conf.h" lastModified="15529e88f18">
+      <source file="..\..\..\cmsis_boot\stm32f4xx_conf.h" lastModified="15480fdbc59">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_adc.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_dma.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_flash.h"/>
@@ -187,79 +187,79 @@
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_usart.h"/>
          <include file="..\..\..\cmsis_lib\include\misc.h"/>
       </source>
-      <source file="..\..\..\cmsis_lib\include\stm32f4xx_adc.h" lastModified="15529e86438">
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_adc.h" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\OsFlag.h" lastModified="15529e86126">
+      <source file="..\..\..\CoOS\kernel\OsFlag.h" lastModified="140bb9f0680">
       </source>
-      <source file="..\..\..\CoOS\kernel\CoOS.h" lastModified="15529e86114">
+      <source file="..\..\..\CoOS\kernel\CoOS.h" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\OsConfig.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\queue.c" lastModified="15529e861ac">
+      <source file="..\..\..\CoOS\kernel\queue.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\OsKernelHeap.h" lastModified="15529e8613d">
+      <source file="..\..\..\CoOS\kernel\OsKernelHeap.h" lastModified="140bb9f0680">
       </source>
-      <source file="..\..\..\cmsis_lib\source\stm32f4xx_dma.c" lastModified="15529e8648c">
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_dma.c" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_dma.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\sem.c" lastModified="15529e861b0">
+      <source file="..\..\..\CoOS\kernel\sem.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
-      <source file="..\..\..\LCD\AsciiLib.h" lastModified="15529e865cb">
+      <source file="..\..\..\LCD\AsciiLib.h" lastModified="140bb9f0298">
       </source>
-      <source file="..\..\..\Tasks\AERTask.h" lastModified="1552b7a4eb0">
+      <source file="..\..\..\Tasks\AERTask.h" lastModified="1552a2a0fe7">
          <include file="..\..\..\CoOS\kernel\CoOS.h"/>
          <include file="..\..\..\AER\AERdriver.h"/>
       </source>
-      <source file="..\..\..\cmsis_lib\include\stm32f4xx_flash.h" lastModified="15529e8644e">
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_flash.h" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
-      <source file="..\..\..\cmsis_lib\source\stm32f4xx_rcc.c" lastModified="15529e864a7">
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_rcc.c" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
       </source>
-      <source file="..\..\..\LCD\AsciiLib.c" lastModified="15529e861e1">
+      <source file="..\..\..\LCD\AsciiLib.c" lastModified="140bb9efeb0">
          <include file="..\..\..\LCD\AsciiLib.h"/>
       </source>
-      <source file="..\..\..\Tasks\AERTask.c" lastModified="1552b7a4ead">
+      <source file="..\..\..\Tasks\AERTask.c" lastModified="1552b47a9c5">
          <include file="..\..\..\Tasks\AERTask.h"/>
          <include file="..\..\..\LCD\LCD.h"/>
          <include file="..\..\..\Tasks\LedTask.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\time.c" lastModified="15529e861c1">
+      <source file="..\..\..\CoOS\kernel\time.c" lastModified="140bb9efeb0">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
-      <source file="..\..\..\BSP\BSP.h" lastModified="15529e860e6">
+      <source file="..\..\..\BSP\BSP.h" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
          <include file="..\..\..\BSP\led_driver.h"/>
          <include file="..\..\..\BSP\joy_driver.h"/>
          <include file="..\..\..\BSP\analogJoy_driver.h"/>
       </source>
-      <source file="..\..\..\cmsis_lib\source\stm32f4xx_gpio.c" lastModified="15529e8649e">
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_gpio.c" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\OsTimer.h" lastModified="15529e8617f">
+      <source file="..\..\..\CoOS\kernel\OsTimer.h" lastModified="140bb9f0680">
       </source>
-      <source file="..\..\..\CoOS\kernel\utility.c" lastModified="15529e861cc">
+      <source file="..\..\..\CoOS\kernel\utility.c" lastModified="140bb9efeb0">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\OsTime.h" lastModified="15529e8617c">
+      <source file="..\..\..\CoOS\kernel\OsTime.h" lastModified="140bb9f0680">
       </source>
-      <source file="..\..\..\cmsis\core_cm4_simd.h" lastModified="15529e867db">
+      <source file="..\..\..\cmsis\core_cm4_simd.h" lastModified="140bb9f0a68">
       </source>
-      <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="15529e86405">
+      <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="1552a12f361">
       </source>
-      <source file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h" lastModified="15529e86458">
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
-      <source file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h" lastModified="15529e86464">
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h" lastModified="15480fcb0f5">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
-      <source file="..\..\..\LCD\LCDUtils.h" lastModified="1552b9696a6">
+      <source file="..\..\..\LCD\LCDUtils.h" lastModified="155359d8254">
       </source>
-      <source file="..\..\..\main.c" lastModified="1552b7a4eb7">
+      <source file="..\..\..\main.c" lastModified="1552b474ecb">
          <include file="..\..\..\CoOS\kernel\CoOS.h"/>
          <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
          <include file="..\..\..\BSP\BSP.h"/>
@@ -268,25 +268,28 @@
          <include file="..\..\..\Tasks\LCDTask.h"/>
          <include file="..\..\..\Tasks\AERTask.h"/>
       </source>
-      <source file="..\..\..\BSP\led_driver.h" lastModified="15529e86108">
+      <source file="..\..\..\BSP\led_driver.h" lastModified="140bb9f0680">
       </source>
-      <source file="..\..\..\CoOS\kernel\OsMM.h" lastModified="15529e86144">
+      <source file="..\..\..\CoOS\kernel\OsMM.h" lastModified="140bb9f0680">
       </source>
-      <source file="..\..\..\CoOS\kernel\timer.c" lastModified="15529e861c9">
+      <source file="..\..\..\LCD\LCDUtils.c" lastModified="15535a978e6">
+         <include file="..\..\..\All.h"/>
+      </source>
+      <source file="..\..\..\CoOS\kernel\timer.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
-      <source file="..\..\..\cmsis_lib\source\stm32f4xx_adc.c" lastModified="15529e86488">
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_adc.c" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_adc.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
       </source>
-      <source file="..\..\..\BSP\led_driver.c" lastModified="15529e86106">
+      <source file="..\..\..\BSP\led_driver.c" lastModified="140bb9f0680">
          <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
          <include file="..\..\..\BSP\led_driver.h"/>
       </source>
-      <source file="..\..\..\CoOS\portable\arch.c" lastModified="15529e861db">
+      <source file="..\..\..\CoOS\portable\arch.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
-      <source file="..\..\..\BSP\analogJoy_driver.h" lastModified="15529e860eb">
+      <source file="..\..\..\BSP\analogJoy_driver.h" lastModified="140bb9f0680">
       </source>
    </includePath>
 </dependencies>
