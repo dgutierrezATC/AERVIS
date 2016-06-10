@@ -3,11 +3,11 @@
 #include "LedTask.h"
 
 /*---------------------------- Symbol Define -------------------------------*/
-#define STACK_SIZE_AER 512              /*!< Define "taskA" task size */
+#define STACK_SIZE_AER 1024              /*!< Define "taskA" task size */
 #define AERDATA_QUEUE_SIZE 512
 
 /*---------------------------- Variable Define -------------------------------*/
-OS_STK aer_stk[2][512];	  /*!< Define "taskA" task stack */
+OS_STK aer_stk[2][STACK_SIZE_AER];	  /*!< Define "taskA" task stack */
 void *queueAERDataBuff[AERDATA_QUEUE_SIZE];
 
 OS_EventID queueAERData;

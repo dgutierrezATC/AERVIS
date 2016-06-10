@@ -56,31 +56,45 @@ void AER_clearNumEventsChannelBuffer(uint32_t *num_events_channel, uint8_t num_c
 		num_events_channel[channel_index] = 0;
 	}
 }
-void SonogramPaint(uint32_t *num_events_channel, int *paint_index) {
+
+void AER_clearNumEventsChannelMatrix(uint16_t num_events_channel[50][64], uint8_t num_channels, uint16_t num_intervals) {
+	uint8_t channel_index = 0;
+	uint16_t interval_index = 0;
+
+	for(interval_index = 0; interval_index < num_intervals; interval_index++){
+		for (channel_index = 0; channel_index < num_channels; channel_index++) {
+			num_events_channel[interval_index][channel_index] = 0;
+		}
+	}
+
+}
+
+void SonogramPaint(uint32_t num_events_channel[50][64]) {
 
 	int i;
+	int j;
 	int max_channel_index = 0;
 	int max_channel_value = 0;
 	int first = 1;
-	for (i = 0; i < 63; i++) {
-		if (first) {
-			max_channel_index = i;
-			max_channel_value = num_events_channel[i];
-			first = 0;
-		} else if (max_channel_value <= num_events_channel[i]) {
-			max_channel_index = i;
-			max_channel_value = num_events_channel[i];
-
+	for(i = 0;i<50;i++){
+		for (j = 0; j < 63; j++) {
+			if (first) {
+				max_channel_index = j;
+				max_channel_value = num_events_channel[i][j];
+				first = 0;
+			} else if (max_channel_value <= num_events_channel[i][j]) {
+				max_channel_index = j;
+				max_channel_value = num_events_channel[i][j];
+			}
 		}
-
-	}
-	for (i = 0; i < 63; i++) {
-		if (num_events_channel[i] = max_channel_value)
-			LCD_FillCircle(20 + paint_index, 220 - i, 1, Red);
-		else if (num_events_channel[i] > max_channel_value/2)
-			LCD_FillCircle(20 + paint_index, 220 - i, 1, Yellow);
-		else
-			LCD_FillCircle(20 + paint_index, 220 - i, 1, Green);
+		for (j = 0; j < 63; j++) {
+			if (num_events_channel[i][j] = max_channel_value)
+				LCD_FillCircle(20 + i*(318/50), 220 - j, 1, Red);
+			else if (num_events_channel[i][j] > max_channel_value/2)
+				LCD_FillCircle(20 + i*(318/50), 220 - j, 1, Yellow);
+			else
+				LCD_FillCircle(20 + i*(318/50), 220 - j, 1, Green);
+		}
 	}
 
 }

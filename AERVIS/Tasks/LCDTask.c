@@ -2,6 +2,7 @@
 
 //Parametros del Histograma
 #define NUM_CHANNELS 64
+#define NUM_INTERVALS 50
 
 uint8_t isFirstTime = 1;
 uint8_t blink = 0;
@@ -9,15 +10,11 @@ uint8_t blink = 0;
 void LCDManagerTask(void* pdata);
 void LCDHelloTask(void * parg);
 void LCDHistogramTask(void * parg);
-void LCD_RxTask(void * parg);
 void LCDSonogramTask(void * parg);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#define STACK_SIZE_LCD 1024              /*!< Define "taskA" task size */
+#define STACK_SIZE_LCD 2500              /*!< Define "taskA" task size */
 OS_STK LCD_stk[2][STACK_SIZE_LCD]; /*!< Define "taskA" task stack */
-
-#define STACK_SIZE_LCD_RXTASK 1024
-OS_STK LCDRX_stk[2][STACK_SIZE_LCD]; /*!< Define "taskA" task stack */
 
 extern OS_EventID queueAERData; //Recepcion desde el AER
 
@@ -69,7 +66,7 @@ void CreateLCDTask(void) {
 	LCD_Clear(Blue);
 
 	CoCreateTask(LCDManagerTask, 0, 3, &LCD_stk[0][STACK_SIZE_LCD-1],
-			STACK_SIZE_LCD);
+			STACK_SIZE_LCD); //Antes -> prioridad 3 (funionando bien histograma)
 
 }
 
@@ -79,18 +76,17 @@ void LCDManagerTask(void* pdata) {
 
 	for (;;) {
 
-		if (isFirstTime) {
+		/*if (isFirstTime) {
 			lcdId =
 					CoCreateTask (LCDHelloTask,0,1,&LCD_stk[1][STACK_SIZE_LCD-1],STACK_SIZE_LCD);
 			waitForKey(5, 0);
 			CoDelTask(lcdId);
 			isFirstTime = 0;
-		}
+		}*/
 
-		/*lcdId =
-				CoCreateTask (LCDHistogramTask,0,1,&LCD_stk[1][STACK_SIZE_LCD-1],STACK_SIZE_LCD);
-		waitForKey(5, 0);
-		CoDelTask(lcdId);*/
+//		lcdId = CoCreateTask (LCDHistogramTask,0,1,&LCD_stk[1][STACK_SIZE_LCD-1],STACK_SIZE_LCD);
+//		waitForKey(5, 0);
+//		CoDelTask(lcdId);
 
 		lcdId =
 				CoCreateTask (LCDSonogramTask,0,1,&LCD_stk[1][STACK_SIZE_LCD-1],STACK_SIZE_LCD);
@@ -193,36 +189,41 @@ void LCDHistogramTask(void * parg) {
 }
 
 void LCDSonogramTask(void * parg) {
-	/////Datos leidos de la cola///////
+//	/////Datos leidos de la cola///////
 	uint16_t dat = 0;
 	uint16_t tim = 0;
 	uint16_t tim_old = 0;
 	uint16_t tim_offset = 0;
-
-	uint16_t interval = (time_end_ref / 318);
-	uint16_t t_init_interval = 0;
-	uint16_t t_end_interval = interval;
-
-	int paint_cont=0;
+//
+//
+	uint16_t t_init_interval = 1;
+	uint16_t t_end_interval = (time_end_ref / NUM_INTERVALS);
+	uint16_t interval_index = 0;
+	uint16_t interval = (time_end_ref / NUM_INTERVALS);
+//
+//
 	StatusType result;
 	void *msg;
-	///////////////////////////////////
-
-	//Informacion extraida de la coclea
+//	///////////////////////////////////
+//
+//	//Informacion extraida de la coclea
 	AERData_type aerDecodedData;
+//
+//	//Array para almacenar el numero de eventos por canal
+	uint16_t numEvents_channel[NUM_INTERVALS][NUM_CHANNELS];
 
-	//Array para almacenar el numero de eventos por canal
-	uint32_t numEvents_channel[NUM_CHANNELS];
-
+//
 	ClearScreenSonogram();
-	/* Preparacion de las mallas del eje X e Y */
+//	/* Preparacion de las mallas del eje X e Y */
+//
+//	//Ponemos a 0 todas las posiciones del array para poder hacer el incremento
+	AER_clearNumEventsChannelMatrix(numEvents_channel, NUM_CHANNELS, NUM_INTERVALS);
+	//interval_index++;
+//
+//	// Bucle principal
 
-	//Ponemos a 0 todas las posiciones del array para poder hacer el incremento
-	AER_clearNumEventsChannelBuffer(numEvents_channel, NUM_CHANNELS);
-
-	// Bucle principal
-	for (;;) {
-
+	while(1) {
+//
 		//Primero cogemos los datos de la cola
 		msg = CoPendQueueMail(queueAERData, 0, &result);
 		dat = ((uint16_t*) msg)[0];
@@ -235,25 +236,25 @@ void LCDSonogramTask(void * parg) {
 		time_absolut = time_absolut + tim + tim_offset;
 
 		//Comprobamos si el paquete está dentro de la ventana temporal
-		if (time_absolut <= time_end_ref) {//periodo de muestreo menor cada columna representa un periodo de integracion
+		if (time_absolut <= time_end_ref && interval_index < NUM_INTERVALS) {//periodo de muestreo menor cada columna representa un periodo de integracion
+			decodeAERData(dat, &aerDecodedData.left_rigth, &aerDecodedData.channel, &aerDecodedData.polarity);
 			if(time_absolut>= t_init_interval && time_absolut <= t_end_interval){
-				decodeAERData(dat, &aerDecodedData.left_rigth, &aerDecodedData.channel, &aerDecodedData.polarity);
-							numEvents_channel[aerDecodedData.channel] = numEvents_channel[aerDecodedData.channel] + 1;
+				numEvents_channel[interval_index][aerDecodedData.channel] = numEvents_channel[interval_index][aerDecodedData.channel] + 1;
 			}else{
-				SonogramPaint(numEvents_channel,&paint_cont);
-				AER_clearNumEventsChannelBuffer(numEvents_channel, NUM_CHANNELS);
-				paint_cont++;
-				t_init_interval = t_end_interval;
-				t_init_interval = (paint_cont+1)*interval;
-				if(paint_cont == 318){
-					paint_cont = 0;
-				}
+				interval_index++;
+				numEvents_channel[interval_index][aerDecodedData.channel] = numEvents_channel[interval_index][aerDecodedData.channel] + 1;
+
 			}
 		} else {
-			AER_clearNumEventsChannelBuffer(numEvents_channel, NUM_CHANNELS);
+			SonogramPaint(numEvents_channel);
+			t_init_interval = t_end_interval;
+			t_init_interval = (interval_index+1)*interval;
+
+
+			AER_clearNumEventsChannelMatrix(numEvents_channel, NUM_CHANNELS,NUM_INTERVALS);
 			ClearScreenSonogram();
-			paint_cont = 0;
 			time_absolut = 0;
+			interval_index = 0;
 		}
 		tim_old = tim;
 	}

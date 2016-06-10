@@ -87,7 +87,7 @@
          <include file="..\..\..\BSP\BSP.h"/>
          <include file="..\..\..\LCD\LCDUtils.h"/>
       </source>
-      <source file="..\..\..\Tasks\LCDTask.c" lastModified="15535c1c910">
+      <source file="..\..\..\Tasks\LCDTask.c" lastModified="15539cc0db5">
          <include file="..\..\..\All.h"/>
       </source>
       <source file="..\..\..\cmsis_lib\include\stm32f4xx_dma.h" lastModified="140bb9f0680">
@@ -222,7 +222,7 @@
       <source file="..\..\..\LCD\AsciiLib.c" lastModified="140bb9efeb0">
          <include file="..\..\..\LCD\AsciiLib.h"/>
       </source>
-      <source file="..\..\..\Tasks\AERTask.c" lastModified="1552b47a9c5">
+      <source file="..\..\..\Tasks\AERTask.c" lastModified="15539b0715b">
          <include file="..\..\..\Tasks\AERTask.h"/>
          <include file="..\..\..\LCD\LCD.h"/>
          <include file="..\..\..\Tasks\LedTask.h"/>
@@ -257,7 +257,7 @@
       <source file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h" lastModified="15480fcb0f5">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
-      <source file="..\..\..\LCD\LCDUtils.h" lastModified="155359d8254">
+      <source file="..\..\..\LCD\LCDUtils.h" lastModified="15539cba301">
       </source>
       <source file="..\..\..\main.c" lastModified="1552b474ecb">
          <include file="..\..\..\CoOS\kernel\CoOS.h"/>
@@ -271,9 +271,6 @@
       <source file="..\..\..\BSP\led_driver.h" lastModified="140bb9f0680">
       </source>
       <source file="..\..\..\CoOS\kernel\OsMM.h" lastModified="140bb9f0680">
-      </source>
-      <source file="..\..\..\LCD\LCDUtils.c" lastModified="15535a978e6">
-         <include file="..\..\..\All.h"/>
       </source>
       <source file="..\..\..\CoOS\kernel\timer.c" lastModified="140bb9f0680">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
